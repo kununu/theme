@@ -1,0 +1,57 @@
+.circle {
+  border-radius: 50%;
+}
+
+.circle-size {
+  @extend .circle;
+  display: inline-block;
+  position: relative;
+}
+
+.circle-xs {
+  @extend .circle-size;
+  width: 10px;
+  height: 10px;
+}
+
+.circle-sm {
+  @extend .circle-size;
+  width: 28px;
+  height: 28px;
+}
+
+.circle-md {
+  @extend .circle-size;
+  width: 36px;
+  height: 36px;
+}
+
+.circle-md-double {
+  @extend .circle-size;
+  width: 70px;
+  height: 70px;
+  .circle-icon {
+    line-height: 70px;
+    font-size: $font-size-xl;
+  }
+}
+
+.circle-lg {
+  @extend .circle-size;
+  width: 90px;
+  height: 90px;
+}
+
+.circle-jumbo {
+  @extend .circle-size;
+  width: 270px;
+  height: 270px;
+
+  .circle-icon {
+    margin: 84px 0 18px;
+  }
+}
+
+.circle-icon {
+  margin: 2px;
+}

@@ -1,0 +1,72 @@
+.container,
+.container-fluid {
+  &.container-narrow {
+    width: 790px; // Responsive deaktivieren
+  }
+
+  &.container-extra-narrow {
+    max-width: 700px;
+  }
+
+  &.container-medium {
+    max-width: 900px;
+  }
+
+  // Make layout 100% width on mobile
+  // TODO: Can this be improved?
+  main > &:not(.container-mobile-padded) {
+    @media (max-width: $screen-sm-max) {
+      padding: 0;
+
+      > .row {
+        margin-left: 0;
+        margin-right: 0;
+
+        > [class*="col-"]:first-child {
+          padding-left: 0;
+        }
+
+        > [class*="col-"]:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1450px;
+
+  // TODO: Clean up this mess someday
+  @media (max-width: $screen-sm-max) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  // TODO: Clean up this mess someday
+  @media (max-width: $screen-xs-max) {
+    padding-left: $grid-gutter-width / 4;
+    padding-right: $grid-gutter-width / 4;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .row {
+    margin-left: -$grid-gutter-width / 4;
+    margin-right: -$grid-gutter-width / 4;
+
+    > [class*="col-"] {
+      padding-left: $grid-gutter-width / 4;
+      padding-right: $grid-gutter-width / 4;
+    }
+  }
+}
+
+.company-group-container {
+  width: 100%;
+  margin: 0;
+}

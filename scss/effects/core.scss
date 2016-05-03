@@ -1,0 +1,613 @@
+// TODO: Get rid of as many of these atomic classes as possible. We are not Yahoo http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/
+%no-padding {
+  padding: 0;
+}
+
+.matted {
+  background: $white;
+  padding: 4px;
+}
+
+.matted-border-lg {
+  border: 8px solid $white;
+}
+
+.matted-border {
+  border: 4px solid $white;
+}
+
+.matted-border-sm {
+  border: 3px solid $white;
+}
+
+.shadow {
+  @include box-shadow(0 1px 4px rgba($black, .25));
+  margin-bottom: 3px;
+}
+
+.shadow-lg {
+  @include box-shadow(0 1px 15px rgba($black, .25));
+  margin-bottom: 3px;
+}
+
+.text-shadow {
+  @include text-shadow;
+}
+
+.text-shadow-darker {
+  @include text-shadow-darker;
+}
+
+.text-shadow-darkest {
+  @include text-shadow-darker;
+}
+
+.rounded-sm {
+  border-radius: $border-radius-sm;
+}
+
+.rounded-top-left {
+  border-top-left-radius: $border-radius-base;
+}
+
+.rounded-top-right {
+  border-top-right-radius: $border-radius-base;
+}
+
+.rounded-bottom-left {
+  border-bottom-left-radius: $border-radius-base;
+}
+
+.rounded-bottom-right {
+  border-bottom-right-radius: $border-radius-base;
+}
+
+.rounded-top {
+  @include border-top-radius($border-radius-base);
+}
+
+.rounded-bottom {
+  @include border-bottom-radius($border-radius-base);
+}
+
+.rounded {
+  border-radius: $border-radius-base;
+}
+
+.rounded-top-left-lg {
+  border-top-left-radius: $border-radius-lg;
+}
+
+.rounded-top-right-lg {
+  border-top-right-radius: $border-radius-lg;
+}
+
+.rotate-neg-90 {
+  @include rotate(-90deg);
+}
+
+.overflow-hide {
+  overflow: hidden;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.squared-top {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.squared-left {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.no-max-width img {
+  max-width: none;
+}
+
+.no-border {
+  border: 0;
+}
+
+.no-border-top {
+  border-top: 0;
+}
+
+.no-border-radius {
+  border-radius: 0;
+}
+
+.no-padding-top {
+  padding-top: 0;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.no-margin-left {
+  margin-left: 0;
+}
+
+.no-margin-right {
+  margin-right: 0;
+}
+
+.border {
+  border: 1px solid $gray-light;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $panel-border;
+}
+
+.border-bottom-double {
+  border-bottom: 2px solid $gray-light;
+}
+
+.no-border {
+  border: 0;
+}
+
+.padding {
+  padding: $grid-gutter-width;
+}
+
+.padding-half {
+  padding: $grid-gutter-width / 2;
+}
+
+.padding-quarter {
+  padding: $grid-gutter-width / 4;
+}
+
+.padding-top {
+  padding-top: $grid-gutter-width;
+}
+
+.padding-bottom {
+  padding-bottom: $grid-gutter-width;
+}
+
+.padding-bottom-double {
+  padding-bottom: $grid-gutter-width * 2;
+}
+
+.padding-bottom-quadruple {
+  padding-bottom: $grid-gutter-width * 4;
+}
+
+.padding-top-half {
+  padding-top: $grid-gutter-width / 2;
+}
+
+.padding-right-half {
+  padding-right: $grid-gutter-width / 2;
+}
+
+.padding-bottom-half {
+  padding-bottom: $grid-gutter-width / 2;
+}
+
+.padding-top-third {
+  padding-top: $grid-gutter-width / 3;
+}
+
+.padding-bottom-third {
+  padding-bottom: $grid-gutter-width / 3;
+}
+
+.padding-top-fourth {
+  padding-top: $grid-gutter-width / 4;
+}
+
+.padding-bottom-fourth {
+  padding-bottom: $grid-gutter-width / 4;
+}
+
+.padding-right {
+  padding-right: $grid-gutter-width;
+}
+
+.padding-left {
+  padding-left: $grid-gutter-width;
+}
+
+.padding-left-half {
+  padding-left: $grid-gutter-width / 2;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-padding-left {
+  padding-left: 0;
+}
+
+.no-padding-right {
+  padding-right: 0;
+}
+
+.margin {
+  margin: $grid-gutter-width;
+}
+
+.margin-third {
+  margin: $grid-gutter-width / 3;
+}
+
+.margin-top {
+  margin-top: $grid-gutter-width;
+}
+
+.margin-top-half {
+  margin-top: $grid-gutter-width / 2;
+}
+
+.margin-top-third {
+  margin-top: $grid-gutter-width / 3;
+}
+
+.margin-left {
+  margin-left: $grid-gutter-width;
+}
+
+.margin-left-half {
+  margin-left: $grid-gutter-width / 2;
+}
+
+.margin-left-third {
+  margin-left: $grid-gutter-width / 3;
+}
+
+.margin-right {
+  margin-right: $grid-gutter-width;
+}
+
+.margin-right-half {
+  margin-right: $grid-gutter-width / 2;
+}
+
+.margin-right-third {
+  margin-right: $grid-gutter-width / 3;
+}
+.margin-right-quarter {
+  margin-right: $grid-gutter-width / 4;
+}
+
+.margin-bottom {
+  margin-bottom: $grid-gutter-width;
+}
+
+.margin-bottom-double {
+  margin-bottom: $grid-gutter-width * 2;
+}
+
+.margin-bottom-half {
+  margin-bottom: $grid-gutter-width / 2;
+}
+
+.margin-bottom-third {
+  margin-bottom: $grid-gutter-width / 3;
+}
+
+.margin-bottom-negative-double {
+  margin-bottom: -$grid-gutter-width * 2;
+}
+
+.margin-vertical {
+  @extend .margin-top;
+  @extend .margin-bottom;
+}
+
+.margin-vertical-half {
+  @extend .margin-top-half;
+  @extend .margin-bottom-half;
+}
+
+.margin-vertical-third {
+  @extend .margin-top-third;
+  @extend .margin-bottom-third;
+}
+
+.margin-horizontal-half {
+  @extend .margin-left-half;
+  @extend .margin-right-half;
+}
+
+.isolated-more {
+  padding: 100px 0;
+}
+
+.isolated {
+  padding: 50px 0;
+}
+
+.bg-top {
+  background-position: center top;
+}
+
+.bg-bottom {
+  background-position: center bottom;
+}
+
+.indicator-top {
+  &:before {
+    @extend .bg-indicator-vertical;
+    content: '';
+    display: block;
+    margin: 0 auto 12px;
+  }
+}
+
+.indicator {
+  position: relative;
+  display: inline-block;
+
+  &:before {
+    content: '';
+    position: absolute;
+  }
+}
+
+.indicator-right {
+  @extend .indicator;
+  float: right;
+  padding: 0 90px 10px 0;
+  text-align: right;
+
+  &:before {
+    @extend .bg-indicator-right;
+    top: 14px;
+    right: 0;
+  }
+}
+
+
+.indicator-left {
+  @extend .indicator;
+  float: left;
+  padding: 0 0 10px 90px;
+  text-align: left;
+
+  &:before {
+    @extend .bg-indicator-left;
+    top: 14px;
+    left: 0;
+  }
+}
+
+.indicator-top-right {
+  @extend .indicator;
+  float: left;
+  padding-top: 57px;
+  text-align: right;
+
+  &:before {
+    @extend .bg-indicator-top-right;
+    top: 0;
+    right: -38px;
+  }
+}
+
+.indicator-left-top {
+  @extend .indicator;
+  float: left;
+  padding: 35px 0 10px 140px;
+  text-align: left;
+
+  &:before {
+    @extend .bg-indicator-left-top;
+    top: 0;
+    left: 60px;
+  }
+}
+
+.indicator-top-left {
+  @extend .indicator;
+  float: right;
+  padding-top: 57px;
+  text-align: left;
+
+  &:before {
+    @extend .bg-indicator-top-left;
+    top: 0;
+    left: -38px;
+  }
+}
+
+.indicator-right-bottom {
+  @extend .indicator;
+  float: right;
+  padding: 0 80px 10px 0;
+  text-align: right;
+
+  &:before {
+    @extend .bg-indicator-right-bottom;
+    top: 17px;
+    right: 0;
+  }
+}
+
+.indicator-left-bottom {
+  @extend .indicator;
+  float: right;
+  padding: 0 0 10px 80px;
+  text-align: left;
+
+  &:before {
+    @extend .bg-indicator-left-bottom;
+    top: 17px;
+    left: 0;
+  }
+}
+
+.indicator-bottom-right {
+  @extend .indicator;
+  float: left;
+  padding: 0 10px 80px 0;
+  text-align: right;
+
+  &:before {
+    @extend .bg-indicator-bottom-right;
+    bottom: 17px;
+    right: 0;
+  }
+}
+
+.indicator-right-top {
+  @extend .indicator;
+  float: left;
+  padding: 0 80px 10px 0;
+
+  &:before {
+    @extend .bg-indicator-right-top;
+    top: 0;
+    right: 0;
+  }
+}
+
+
+.sticker,
+.sticker-green,
+.sticker-blue {
+  @include rotate(-8deg);
+  text-shadow: none;
+  padding: 34px 0;
+  text-align: center;
+  text-transform: none;
+  color: $white;
+  z-index: 1;
+
+  .sticker-title {
+    font-size: 39px;
+    line-height: .84;
+    margin: 3px 0 0;
+  }
+}
+
+.sticker-green {
+  @extend .bg-sticker-green;
+}
+
+.sticker-blue {
+  @extend .bg-sticker-blue;
+}
+
+.img-centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.point,
+.point-bottom,
+.point-bottom-orange,
+.point-right {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: solid transparent;
+  }
+}
+
+[ku-grayscale] {
+  // Firefox 10-34
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale");
+
+  // Chrome 19+, Safari 6+, Safari 6+ iOS, Opera 15+
+  -webkit-filter: grayscale(1);
+
+  // Firefox 35+
+  filter: grayscale(1);
+
+  // IE 6-9
+  filter: gray;
+}
+
+.opacity-half {
+  opacity: .5;
+
+  &[ku-grayscale] {
+    filter: gray
+            alpha(opacity=50);
+  }
+}
+
+.opacity-third {
+  @include opacity(.4);
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+.fakelink {
+  cursor: pointer;
+}
+
+.fade-to-white-overlay {
+  position: absolute;
+
+  .pointerevents & {
+    @include gradient-vertical-four-colors(rgba(#fff, 0), rgba(#fff, 0), rgba(#fff, .6), #fff, 0%, 40%, 60%, 100%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+  }
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+[ng-click] {
+  cursor: pointer;
+}
+
+@media (max-width: $screen-sm-max) {
+  .no-padding-mobile {
+    > [class*="col-"] {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .margin-top-half-xs {
+    margin-top: $grid-gutter-width / 2;
+  }
+}

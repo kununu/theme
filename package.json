@@ -1,0 +1,22 @@
+{
+  "name": "kununu-theme",
+  "version": "1.0.0",
+  "description": "Base scss styles for kununu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kununu/theme.git"
+  },
+  "keywords": [
+    "kununu-theme"
+  ],
+  "author": "kununu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kununu/theme/issues"
+  },
+  "homepage": "https://github.com/kununu/theme#readme"
+}

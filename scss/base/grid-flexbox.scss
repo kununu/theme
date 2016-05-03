@@ -1,0 +1,117 @@
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container-flex {
+  @include make-container();
+  @include make-container-max-widths();
+
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid-flex {
+  @include make-container();
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+@if $enable-grid-classes {
+  .row-flex {
+    @include make-row();
+  }
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+  // Common properties for all breakpoints
+  %grid-column {
+    position: relative;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Inner gutter via padding
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
+  }
+  @each $breakpoint in map-keys($breakpoints) {
+    @for $i from 1 through $columns {
+      .col-#{$breakpoint}-#{$i}-flex {
+        @extend %grid-column;
+      }
+    }
+    @include media-breakpoint-up($breakpoint) {
+      // Work around cross-media @extend (https://github.com/sass/sass/issues/1050)
+      %grid-column-float-#{$breakpoint} {
+        float: left;
+      }
+      @for $i from 1 through $columns {
+        .col-#{$breakpoint}-#{$i}-flex {
+          @if not $enable-flex {
+            @extend %grid-column-float-#{$breakpoint};
+          }
+          @include make-col($i, $columns);
+        }
+      }
+      @each $modifier in (pull, push, offset) {
+        @for $i from 0 through $columns {
+          .col-#{$breakpoint}-#{$modifier}-#{$i}-flex {
+            @include make-col-modifier($modifier, $i, $columns)
+          }
+        }
+      }
+    }
+  }
+}
+
+@if $enable-grid-classes {
+  @include make-grid-columns();
+}
+
+
+// Flex variation
+//
+// Custom styles for additional flex alignment options.
+
+@if $enable-flex and $enable-grid-classes {
+
+  // Flex column reordering
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .col-#{$breakpoint}-first-flex { order: -1; }
+      .col-#{$breakpoint}-last-flex  { order: 1; }
+    }
+  }
+
+  // Alignment for every column in row
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .row-#{$breakpoint}-top-flex    { align-items: flex-start; }
+      .row-#{$breakpoint}-center-flex { align-items: center; }
+      .row-#{$breakpoint}-bottom-flex { align-items: flex-end; }
+    }
+  }
+
+  // Alignment per column
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .col-#{$breakpoint}-top-flex    { align-self: flex-start; }
+      .col-#{$breakpoint}-center-flex { align-self: center; }
+      .col-#{$breakpoint}-bottom-flex { align-self: flex-end; }
+    }
+  }
+
+}

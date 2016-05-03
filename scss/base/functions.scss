@@ -1,0 +1,3 @@
+@function valign-offset($container-height, $element-height) {
+  @return (($container-height - $element-height) / 2);
+}

@@ -24,4 +24,12 @@
       font-size: 16px;
     }
   }
+
+  .printer-hidden {
+    display: none !important;
+  }
+
+  .printer-visible {
+    display: block !important;
+  }
 }

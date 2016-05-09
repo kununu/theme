@@ -1,4 +1,4 @@
-@import 'bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/mixins';
 
 @mixin panel-variant($border, $heading-text-color, $heading-bg-color, $heading-border) {
   border-color: $border;

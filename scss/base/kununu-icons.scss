@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'kununu';
+  src: url('~fonts/kununu.eot');
+  src: url('~fonts/kununu.eot') format('embedded-opentype'),
+       url('~fonts/kununu.woff2') format('woff2'),
+       url('~fonts/kununu.woff') format('woff'),
+       url('~fonts/kununu.ttf') format('truetype'),
+       url('~fonts/kununu.svg#kununu') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ku-xl {
+  font-size: $font-size-jumbo;
+}
+
+$font-kununu-at: '\f112';
+$font-kununu-band-aids: '\f113';
+$font-kununu-bar-chart: '\f114';
+$font-kununu-books: '\f115';
+$font-kununu-brave: "\f151";
+$font-kununu-business-person: '\f12b';
+$font-kununu-car: '\f116';
+$font-kununu-certificate: '\f12e';
+$font-kununu-chair: '\f12c';
+$font-kununu-champagne: '\f117';
+$font-kununu-clock: '\f118';
+$font-kununu-clothing: '\f119';
+$font-kununu-contributionplan: '\f13e';
+$font-kununu-cutlery: '\f11a';
+$font-kununu-definedcontribution: '\f13f';
+$font-kununu-discount: '\f11b';
+$font-kununu-dog: '\f11c';
+$font-kununu-empathy: '\f14d';
+$font-kununu-family: '\f11d';
+$font-kununu-fitnesscenter: '\f140';
+$font-kununu-flexiblespending: '\f141';
+$font-kununu-fruit: '\f11e';
+$font-kununu-gas-pump: '\f11f';
+$font-kununu-healthcarenetwork: '\f142';
+$font-kununu-heartbeat: '\f120';
+$font-kununu-home: '\f121';
+$font-kununu-housingrelocation: '\f143';
+$font-kununu-improvement: '\f14e';
+$font-kununu-inclusiveness: '\f14f';
+$font-kununu-k: '\f122';
+$font-kununu-kununu-star: '\f123';
+$font-kununu-lifeinsurance: '\f144';
+$font-kununu-maternity: '\f145';
+$font-kununu-mobile: '\f124';
+$font-kununu-officelocation: '\f146';
+$font-kununu-onsitedaycare: '\f147';
+$font-kununu-paidtimeoff: '\f148';
+$font-kununu-parking: '\f125';
+$font-kununu-piggy-bank: '\f126';
+$font-kununu-providedfood: '\f149';
+$font-kununu-reimburseddaycare: '\f14a';
+$font-kununu-stack: '\f127';
+$font-kununu-star-empty: '\2606';
+$font-kununu-star-full: '\2605';
+$font-kununu-strategy: '\f12d';
+$font-kununu-telcoarrangements: '\f14b';
+$font-kununu-train: '\f128';
+$font-kununu-transparency: '\f150';
+$font-kununu-tuition: '\f14c';
+$font-kununu-wheelchair: '\f129';
+$font-kununu-whistle: '\f12a';
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.ku-at:before,
+.ku-band-aids:before,
+.ku-bar-chart:before,
+.ku-books:before,
+.ku-brave:before,
+.ku-business-person:before,
+.ku-car:before,
+.ku-certificate:before,
+.ku-chair:before,
+.ku-champagne:before,
+.ku-clock:before,
+.ku-clothing:before,
+.ku-contributionplan:before,
+.ku-cutlery:before,
+.ku-definedcontribution:before,
+.ku-discount:before,
+.ku-dog:before,
+.ku-empathy:before,
+.ku-family:before,
+.ku-fitnesscenter:before,
+.ku-flexiblespending:before,
+.ku-fruit:before,
+.ku-gas-pump:before,
+.ku-healthcarenetwork:before,
+.ku-heartbeat:before,
+.ku-home:before,
+.ku-housingrelocation:before,
+.ku-improvement:before,
+.ku-inclusiveness:before,
+.ku-k:before,
+.ku-kununu-star:before,
+.ku-lifeinsurance:before,
+.ku-maternity:before,
+.ku-mobile:before,
+.ku-officelocation:before,
+.ku-onsitedaycare:before,
+.ku-paidtimeoff:before,
+.ku-parking:before,
+.ku-piggy-bank:before,
+.ku-providedfood:before,
+.ku-reimburseddaycare:before,
+.ku-stack:before,
+.ku-star-empty:before,
+.ku-star-full:before,
+.ku-strategy:before,
+.ku-telcoarrangements:before,
+.ku-train:before,
+.ku-transparency:before,
+.ku-tuition:before,
+.ku-wheelchair:before,
+.ku-whistle:before {
+  display: inline-block;
+  font-family: 'kununu';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.ku-at:before { content: '\f112'; }
+.ku-band-aids:before { content: '\f113'; }
+.ku-bar-chart:before { content: '\f114'; }
+.ku-books:before { content: '\f115'; }
+.ku-brave:before { content: "\f151"; }
+.ku-business-person:before { content: '\f12b'; }
+.ku-car:before { content: '\f116'; }
+.ku-certificate:before { content: '\f12e'; }
+.ku-chair:before { content: '\f12c'; }
+.ku-champagne:before { content: '\f117'; }
+.ku-clock:before { content: '\f118'; }
+.ku-clothing:before { content: '\f119'; }
+.ku-contributionplan:before { content: '\f13e'; }
+.ku-cutlery:before { content: '\f11a'; }
+.ku-definedcontribution:before { content: '\f13f'; }
+.ku-discount:before { content: '\f11b'; }
+.ku-dog:before { content: '\f11c'; }
+.ku-empathy:before { content: '\f14d'; }
+.ku-family:before { content: '\f11d'; }
+.ku-fitnesscenter:before { content: '\f140'; }
+.ku-flexiblespending:before { content: '\f141'; }
+.ku-fruit:before { content: '\f11e'; }
+.ku-gas-pump:before { content: '\f11f'; }
+.ku-healthcarenetwork:before { content: '\f142'; }
+.ku-heartbeat:before { content: '\f120'; }
+.ku-home:before { content: '\f121'; }
+.ku-housingrelocation:before { content: '\f143'; }
+.ku-improvement:before { content: '\f14e'; }
+.ku-inclusiveness:before { content: '\f14f'; }
+.ku-k:before { content: '\f122'; }
+.ku-kununu-star:before { content: '\f123'; }
+.ku-lifeinsurance:before { content: '\f144'; }
+.ku-maternity:before { content: '\f145'; }
+.ku-mobile:before { content: '\f124'; }
+.ku-officelocation:before { content: '\f146'; }
+.ku-onsitedaycare:before { content: '\f147'; }
+.ku-paidtimeoff:before { content: '\f148'; }
+.ku-parking:before { content: '\f125'; }
+.ku-piggy-bank:before { content: '\f126'; }
+.ku-providedfood:before { content: '\f149'; }
+.ku-reimburseddaycare:before { content: '\f14a'; }
+.ku-stack:before { content: '\f127'; }
+.ku-star-empty:before { content: '\2606'; }
+.ku-star-full:before { content: '\2605'; }
+.ku-strategy:before { content: '\f12d'; }
+.ku-telcoarrangements:before { content: '\f14b'; }
+.ku-train:before { content: '\f128'; }
+.ku-transparency:before { content: '\f150'; }
+.ku-tuition:before { content: '\f14c'; }
+.ku-wheelchair:before { content: '\f129'; }
+.ku-whistle:before { content: '\f12a'; }

@@ -47,6 +47,10 @@
     border-bottom: 5px solid $white;
     background: darken($gray-lightest, 1%);
   }
+
+  > thead > tr > th {
+    color: $gray-base-90;
+  }
 }
 
 .table-bordered-light {

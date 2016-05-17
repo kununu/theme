@@ -1,0 +1,107 @@
+.panel {
+  border-bottom: 2px solid $gray-lighter;
+  position: relative;
+  background-color: $panel-bg;
+
+
+  &.panel-no-border {
+    border: none;
+  }
+
+  .row:first-child > [class*='col-'] {
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6 {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// Panel contents
+.panel-body {
+  @include clearfix();
+  padding: $panel-padding;
+  font-size: $font-size-h4;
+  line-height: 1.65;
+
+  @media (min-width: $screen-lg-min) {
+    padding: $panel-padding * 2;
+
+    .panel-compact & {
+      padding: $panel-padding;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    padding: $panel-padding / 2;
+  }
+}
+
+// Optional heading
+.panel-heading {
+  padding: $panel-padding;
+  background-color: $gray-lightest;
+  border-bottom: 1px solid $blue-light-sat;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    padding: $panel-padding / 2;
+  }
+}
+
+.panel-body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+// Optional footer (stays gray in every modifier class)
+.panel-footer {
+  padding: $panel-padding;
+  background-color: $panel-footer-bg;
+}
+
+// Style Guide Color Swatches
+.panel-colorswatches {
+  margin-bottom: 2em;
+  background: $white;
+  padding: .5em;
+  border-radius: .25em;
+}
+
+.panel-colorswatches p {
+  font-size: $font-size-smaller;
+  color: $gray-base-50;
+  line-height: 1.75em;
+}
+
+.panel-colorswatches .panel-body {
+  padding: .5em 1em 1em 1em;
+}
+
+.panel-colorswatches code {
+  color: $gray-base;
+  background: $gray-base-03;
+}

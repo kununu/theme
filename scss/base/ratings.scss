@@ -1,0 +1,54 @@
+rating .rating-star:before,
+ku-rating .rating-star:before {
+  content: $fa-var-star;
+}
+
+.rating-0-5 .rating-star-1,
+.rating-1-5 .rating-star-2,
+.rating-2-5 .rating-star-3,
+.rating-3-5 .rating-star-4,
+.rating-4-5 .rating-star-5 {
+  &:before {
+    content: $fa-var-star-half-full;
+  }
+
+  ~ .rating-star:before {
+    content: $fa-var-star-o;
+  }
+}
+
+.rating-1 .rating-star-1,
+.rating-2 .rating-star-2,
+.rating-3 .rating-star-3,
+.rating-4 .rating-star-4,
+.rating-5 .rating-star-5 {
+  &:before {
+    content: $fa-var-star;
+  }
+
+  ~ .rating-star:before {
+    content: $fa-var-star-o;
+  }
+}
+
+.rating-0 .rating-star:before {
+  content: $fa-var-star-o;
+}
+
+.rating-star {
+  margin: 0 1px;
+}
+
+.rating-badge {
+  font-size: $font-size-xs;
+  color: $text-muted;
+  padding-right: 10px;
+  text-align: right;
+  width: 35px;
+  display: inline-block;
+
+  &:empty {
+    display: none;
+  }
+}
+

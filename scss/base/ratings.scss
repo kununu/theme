@@ -1,5 +1,6 @@
 rating .rating-star:before,
-ku-rating .rating-star:before {
+ku-rating .rating-star:before,
+.rating-star:before {
   content: $fa-var-star;
 }
 

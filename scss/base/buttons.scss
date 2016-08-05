@@ -250,27 +250,3 @@ a.text-link.small {
   font-size: $font-size-sm;
   padding: 18px 40px;
 }
-
-.btn-default-dark,
-.btn-default-dark.active {
-  text-transform: uppercase;
-  box-shadow: none;
-  background-color: $gray-base-30;
-  border-color: $gray-base-30;
-
-  &:active {
-    box-shadow: none;
-    border-color: $gray-base-30;
-  }
-
-  &:hover {
-    background-color: $gray-base-30;
-  }
-}
-
-.btn-secondary.active {
-  box-shadow: none;
-  background-color: $btn-secondary-hover;
-  border-color: $btn-secondary-hover;
-  color: $white;
-}

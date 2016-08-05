@@ -414,6 +414,10 @@
   cursor: pointer;
 }
 
+.pointer-disabled {
+  pointer-events: none;
+}
+
 .fade-to-white-overlay {
   position: absolute;
 

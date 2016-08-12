@@ -13,18 +13,16 @@ For example, to quickly iterate on the kununu theme while using it in another pr
 To link the `kununu-theme` git repository to `node_modules` of the other project:
 
 * Go into the root of the *theme folder* and type ```npm link```
-* Go into the root folder of *your application* and type ```npm link kununu-theme```
+* Go into the root folder of *the other project* and type ```npm link kununu-theme```
 
 To remove the links again:
 
 * Go into the root of the *theme folder* and type ```npm unlink```
-* Go into the root folder of *your application* and type ```npm unlink kununu-theme```
+* Go into the root folder of *the other project* and type ```npm unlink kununu-theme```
 * Eventually redo ```npm install```
 
 [npm documentation - link](https://docs.npmjs.com/cli/link)
 
 ## Dependencies
-These styles should be used with Bootstap and loaded using webpack
 
-
-
+The styles depend on Bootstap and can be bundled using webpack.

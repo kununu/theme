@@ -3,7 +3,7 @@
   "version": "1.0.6",
   "description": "Base scss styles for kununu",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test specified\""
   },
   "repository": {
     "type": "git",

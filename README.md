@@ -31,5 +31,7 @@ The styles depend on Bootstap and can be bundled using webpack.
 
 In order to update the npm version we must update the tag. Once an updated tag has been pushed and merged into master Travis will automatically update the npm version.
 
-git tag -a v1.0.* -m <what changed in this version>
+```bash
+git tag -a vX.Y.Z -m "<what changed in this version>"
 git push --tags
+```

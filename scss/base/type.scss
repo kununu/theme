@@ -178,6 +178,15 @@ p {
   }
 }
 
+.header-small {
+  color: $gray-base-50;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  margin: 0;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
 .us-layout p {
   font-size: $font-size-h4;
   line-height: 1.65;
@@ -283,6 +292,10 @@ p {
 
 .text-monospace {
   font-family: $font-family-monospace;
+}
+
+.text-link {
+  color: $blue;
 }
 
 .dl-horizontal dt {

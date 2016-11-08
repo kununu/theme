@@ -26,3 +26,13 @@ To remove the links again:
 ## Dependencies
 
 The styles depend on Bootstap and can be bundled using webpack.
+
+## Publish a new version
+
+In order to update the npm version we must create and push a new tag. Pushing a new tag will cause Travis to automatically publish the new npm version ([docs](https://docs.travis-ci.com/user/deployment/npm)).
+
+```bash
+# Do the following on the master branch
+git tag -a vX.Y.Z -m "<what changed in this version>"
+git push --tags
+```

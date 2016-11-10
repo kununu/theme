@@ -452,3 +452,18 @@
     margin-top: $grid-gutter-width / 2;
   }
 }
+
+.bullet-after:after {
+  content: '\2022';
+  padding: 0 8px;
+
+  @media (max-width: $screen-sm-min) {
+    display: block;
+    content: '';
+  }
+}
+
+.bullet-before:before {
+  content: '\2022';
+  padding: 0 8px;
+}

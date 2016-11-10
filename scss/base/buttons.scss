@@ -250,3 +250,16 @@ a.text-link.small {
   font-size: $font-size-sm;
   padding: 18px 40px;
 }
+
+.btn-outline {
+  background: transparent;
+  color: $blue;
+  border: 1px solid $blue;
+  text-transform: uppercase;
+
+  &:hover {
+    $hover-blue: darken($blue, 10%);
+    border-color: $hover-blue;
+    color: $hover-blue;
+  }
+}

@@ -259,7 +259,7 @@ a.text-link.small {
 
   &:hover {
     $hover-blue: darken($blue, 10%);
-    border-color: darken($blue, 10%);
+    border-color: $hover-blue;
     color: $hover-blue;
   }
 }

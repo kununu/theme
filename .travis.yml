@@ -8,3 +8,6 @@ deploy:
     tags: true
     branch: master
     repo: kununu/theme
+
+notifications:
+  email: false

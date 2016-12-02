@@ -173,6 +173,14 @@ a.text-link.small {
       background-color: lighten($xing-green, 10%);
     }
   }
+
+  &.linkedin-blue {
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: lighten($linkedin-blue, 10%);
+    }
+  }
 }
 
 .btn-back-to-top {

@@ -147,7 +147,7 @@ $line-height-base:           1.428571429; // 20/14
 $line-height-sm-computed:    floor($font-size-sm * $line-height-base); // ~20px
 $baseline-grid:              6px;
 
-$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 
 $font-weight-light:          300;
 $font-weight-regular:        400;
@@ -225,66 +225,66 @@ $btn-danger-border:              darken($btn-danger-bg, 7%);
 // Forms
 // -------------------------
 
-$input-bg:                       #fff !default;
-$input-bg-disabled:              $gray-lighter !default;
+$input-bg:                       #fff;
+$input-bg-disabled:              $gray-lighter;
 
-$input-border-radius:            $border-radius-base !default;
-$input-color-placeholder:        #999 !default;
-$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
-$form-group-margin-bottom:       15px !default;
-$legend-color:                   $gray-dark !default;
-$legend-border-color:            #e5e5e5 !default;
+$input-border-radius:            $border-radius-base;
+$input-color-placeholder:        #999;
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2);
+$form-group-margin-bottom:       15px;
+$legend-color:                   $gray-dark;
+$legend-border-color:            #e5e5e5;
 
-$input-color:                    $gray !default;
+$input-color:                    $gray;
 $input-border:                   $gray-base-20;
 $input-border-focus:             $gray-base-30;
 $input-border-radius-lg:         4px;
 $input-border-radius-sm:         3px;
 
-$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 6) !default;
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 6);
 $input-height-large:             (floor($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 6);
 $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 6);
 $input-height-sm:                $input-height-small;
 
 //** Disabled cursor for form controls and buttons.
-$cursor-disabled:                not-allowed !default;
+$cursor-disabled:                not-allowed;
 
 
 //== Media queries breakpoints
 
 // Extra small screen / phone
 //** Deprecated `$screen-xs` as of v3.0.1
-$screen-xs:                  480px !default;
+$screen-xs:                  480px;
 //** Deprecated `$screen-xs-min` as of v3.2.0
-$screen-xs-min:              $screen-xs !default;
+$screen-xs-min:              $screen-xs;
 //** Deprecated `$screen-phone` as of v3.0.1
-$screen-phone:               $screen-xs-min !default;
+$screen-phone:               $screen-xs-min;
 
 // Small screen / tablet
 //** Deprecated `$screen-sm` as of v3.0.1
-$screen-sm:                  768px !default;
+$screen-sm:                  768px;
 $screen-sm-min:              550px;
 //** Deprecated `$screen-tablet` as of v3.0.1
-$screen-tablet:              $screen-sm-min !default;
+$screen-tablet:              $screen-sm-min;
 
 // Medium screen / desktop
 //** Deprecated `$screen-md` as of v3.0.1
-$screen-md:                  992px !default;
+$screen-md:                  992px;
 $screen-md-min:              998px;
 //** Deprecated `$screen-desktop` as of v3.0.1
-$screen-desktop:             $screen-md-min !default;
+$screen-desktop:             $screen-md-min;
 
 // Large screen / wide desktop
 //** Deprecated `$screen-lg` as of v3.0.1
-$screen-lg:                  1200px !default;
-$screen-lg-min:              $screen-lg !default;
+$screen-lg:                  1200px;
+$screen-lg-min:              $screen-lg;
 //** Deprecated `$screen-lg-desktop` as of v3.0.1
-$screen-lg-desktop:          $screen-lg-min !default;
+$screen-lg-desktop:          $screen-lg-min;
 
 // So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-sm-min - 1) !default;
-$screen-sm-max:              ($screen-md-min - 1) !default;
-$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
 
 
 //== Container sizes

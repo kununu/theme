@@ -104,12 +104,15 @@ $text-color-dark:       $teal-dark;
 
 $link-color:            $blue;
 $link-active-color:     $text-color;
+$link-hover-color:      darken($link-color, 15%);
+$link-hover-decoration: underline;
 
 
 // Typography
 // -------------------------
 
 $font-family-sans-serif:     'Whitney SSm A', 'Whitney SSm B', sans-serif;
+$font-family-base:           $font-family-sans-serif;
 
 $font-size-jumbo:            35px;
 $font-size-xxl:              28px;
@@ -144,7 +147,7 @@ $line-height-base:           1.428571429; // 20/14
 $line-height-sm-computed:    floor($font-size-sm * $line-height-base); // ~20px
 $baseline-grid:              6px;
 
-$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 
 $font-weight-light:          300;
 $font-weight-regular:        400;
@@ -160,6 +163,7 @@ $headings-font-weight:       $font-weight-semibold;
 // -------------------------
 
 $padding-base-vertical:          10px;
+$padding-base-horizontal:        12px;
 
 $padding-large-vertical:         18px;
 $padding-xs-vertical:            2px;
@@ -213,6 +217,7 @@ $btn-info-border:                $green-dark;
 $btn-info-hover:                 $green;
 
 $btn-danger-bg:                  $brand-danger;
+$btn-danger-color:               #fff;
 $btn-danger-bg-end:              darken($btn-danger-bg, 5%);
 $btn-danger-border:              darken($btn-danger-bg, 7%);
 
@@ -220,23 +225,66 @@ $btn-danger-border:              darken($btn-danger-bg, 7%);
 // Forms
 // -------------------------
 
+$input-bg:                       #fff;
+$input-bg-disabled:              $gray-lighter;
+
+$input-border-radius:            $border-radius-base;
+$input-color-placeholder:        #999;
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2);
+$form-group-margin-bottom:       15px;
+$legend-color:                   $gray-dark;
+$legend-border-color:            #e5e5e5;
+
+$input-color:                    $gray;
 $input-border:                   $gray-base-20;
 $input-border-focus:             $gray-base-30;
 $input-border-radius-lg:         4px;
 $input-border-radius-sm:         3px;
 
-$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 6) !default;
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 6);
 $input-height-large:             (floor($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 6);
 $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 6);
 $input-height-sm:                $input-height-small;
 
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled:                not-allowed;
 
 
 //== Media queries breakpoints
-//
-// Responsive deaktivieren
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px;
 $screen-sm-min:              550px;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px;
 $screen-md-min:              998px;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px;
+$screen-lg-min:              $screen-lg;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
 
 
 //== Container sizes
@@ -330,6 +378,7 @@ $popover-arrow-outer-fallback-color:  $teal-dark;
 // Labels
 // -------------------------
 
+$label-danger-bg:                 $brand-danger;
 $label-default-bg:                $teal;
 $label-default-bg-end:            $teal-dark;
 $label-primary-bg:                $brand-primary;
@@ -352,7 +401,9 @@ $section-title-border:        darken($gray-light, 10%);
 // Panels
 // -------------------------
 
+$panel-bg:                    #fff;
 $panel-border:                lighten($gray-light, 7%);
+$panel-footer-bg:             #f5f5f5;
 $panel-inner-border:          $panel-border;
 $panel-padding:               $grid-gutter-width / 2;
 
@@ -362,6 +413,8 @@ $media-border:             $gray-light;
 $media-border-radius:      $border-radius-base;
 $media-bg:                 $white;
 $media-padding:            $grid-gutter-width / 2;
+$thumbnail-border-radius:  $border-radius-base;
+$thumbnail-padding:         4px;
 $thumbnail-bg:             $white;
 $thumbnail-border:         $gray-lightest;
 
@@ -393,6 +446,28 @@ $carousel-indicator-bg:                       $white;
 $carousel-indicator-active-bg:                $green;
 $carousel-indicator-active-border-color:      $green;
 
+
+//== Pagination
+//
+//##
+
+$pagination-color:                     $link-color;
+$pagination-bg:                        #fff;
+$pagination-border:                    #ddd;
+
+$pagination-hover-color:               $link-hover-color;
+$pagination-hover-bg:                  $gray-lighter;
+$pagination-hover-border:              #ddd;
+
+$pagination-active-color:              #fff;
+$pagination-active-bg:                 $brand-primary;
+$pagination-active-border:             $brand-primary;
+
+$pagination-disabled-color:            $gray-light;
+$pagination-disabled-bg:               #fff;
+$pagination-disabled-border:           #ddd;
+
+
 // Type
 // ------------------------
 $text-muted-light:               lighten($gray, 40%);
@@ -405,9 +480,10 @@ $headings-small-color:           $text-muted;
 // Z-indexes
 // -------------------------
 
-$zindex-overlay:            990;
-$zindex-tooltip:            800;
-$zindex-accessibility-aid:  1060;
+$zindex-popover:             1060;
+$zindex-overlay:             990;
+$zindex-tooltip:             800;
+$zindex-accessibility-aid:   1060;
 
 
 // Miscellaneous
@@ -415,5 +491,3 @@ $zindex-accessibility-aid:  1060;
 
 // Horizontal forms & lists
 $component-offset-horizontal: 66px;
-
-@import '~bootstrap-sass/assets/stylesheets/bootstrap/variables';

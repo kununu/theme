@@ -1,6 +1,6 @@
 {
   "name": "kununu-theme",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Base scss styles for kununu",
   "scripts": {
     "test": "echo \"No test specified\""

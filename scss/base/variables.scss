@@ -38,6 +38,9 @@ $green:               #99c613;
 $green-light:         lighten($green, 4%);
 $green-dark:          darken($green, 2%);
 
+$blue-new:            #2186db;
+$blue-light-new:      lighten($blue-new, 6%);
+$blue-dark-new:       darken($blue-new, 6%);
 $blue:                #2286dc;
 $blue-light:          lighten($blue, 6%);
 $blue-dark:           darken($blue, 6%);
@@ -119,6 +122,7 @@ $font-size-xxl:              28px;
 $font-size-xl:               22px;
 $font-size-large:            18px;
 $font-size-lg:               $font-size-large;
+$font-size-md:               16px;
 $font-size-base:             14px;
 $font-size-small:            13px;
 $font-size-sm:               $font-size-small;

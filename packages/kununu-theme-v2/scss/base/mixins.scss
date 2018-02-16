@@ -1,0 +1,219 @@
+@mixin panel-variant($border, $heading-text-color, $heading-bg-color, $heading-border) {
+  border-color: $border;
+
+  & > .panel-heading {
+    color: $heading-text-color;
+    background-color: $heading-bg-color;
+    border-color: $heading-border;
+
+    + .panel-collapse > .panel-body {
+      border-top-color: $border;
+    }
+  }
+  & > .panel-footer {
+    + .panel-collapse > .panel-body {
+      border-bottom-color: $border;
+    }
+  }
+}
+
+@mixin label-variant($color) {
+  background-color: $color;
+  border-color: darken($color, 8%);
+
+  &[href] {
+    &:hover,
+    &:focus {
+      background-color: darken($color, 10%);
+      border-color: darken($color, 15%);
+    }
+  }
+}
+
+@mixin button-variant(
+  $color,
+  $background,
+  $border,
+  $hoverBackground : lighten($background, 5%),
+  $hoverBorder     : lighten($background, 5%),
+  $activeBackground: darken($background, 5%),
+  $activeBorder    : darken($background, 5%)
+) {
+  @include transition(background-color .15s);
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: $hoverBackground;
+    border-color: $hoverBorder;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-image: none;
+    background-color: $activeBackground;
+    border-color: $activeBorder;
+  }
+
+  &:active,
+  &.active {
+    @include box-shadow(none);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+}
+
+@mixin gradient-horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-color: mix($start-color, $end-color);
+  background-image: -webkit-linear-gradient(left, color-stop($start-color $start-percent), color-stop($end-color $end-percent)); // Safari 5.1-6, Chrome 10+
+  background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+}
+
+@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-color: $start-color;
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+}
+
+@mixin gradient-vertical-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $end-color: #c3325f, $start-stop: 0%, $mid-stop: 50%, $end-stop: 100%) {
+  background-image: -webkit-gradient(linear, 0 $start-stop, 0 $end-stop, from($start-color), color-stop($mid-stop, $mid-color), to($end-color));
+  background-image: -webkit-linear-gradient($start-color $start-stop, $mid-color $mid-stop, $end-color $start-stop);
+  background-image: -moz-linear-gradient(top, $start-color $start-stop, $mid-color $mid-stop, $end-color $end-stop);
+  background-image: linear-gradient($start-color $start-stop, $mid-color $mid-stop, $end-color $end-stop);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down, gets no color-stop at all for proper fallback
+}
+
+@mixin gradient-vertical-four-colors($first-color: #000000, $second-color: #666666, $third-color: #cccccc, $fourth-color: #ffffff, $first-stop: 0%, $second-stop: 33%, $third-stop: 66%, $fourth-stop: 100%) {
+  background-image: -webkit-gradient(linear, 0 $first-stop, 0 $fourth-stop, from($first-color), color-stop($second-stop, $second-color), color-stop($third-stop, $third-color), to($fourth-color));
+  background-image: -webkit-linear-gradient($first-color $first-stop, $second-color $second-stop, $third-color $third-stop, $fourth-color $fourth-stop);
+  background-image: -moz-linear-gradient(top, $first-color $first-stop, $second-color $second-stop, $third-color $third-stop, $fourth-color $fourth-stop);
+  background-image: linear-gradient($first-color $first-stop, $second-color $second-stop, $third-color $third-stop, $fourth-color $fourth-stop);
+  background-repeat: no-repeat;
+}
+
+@mixin flip-horizontal {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: fliph;
+  filter: fliph;
+}
+
+@mixin rotate-and-flip($degrees) {
+  -webkit-transform: scaleX(-1) rotate(#{$degrees}deg);
+  -moz-transform: scaleX(-1) rotate(#{$degrees}deg);
+  -ms-transform: scaleX(-1) rotate(#{$degrees}deg);
+  -o-transform: scaleX(-1) rotate(#{$degrees}deg);
+  transform: scaleX(-1) rotate(#{$degrees}deg);
+  -ms-filter: "fliph, progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+  zoom: 1;
+}
+
+@mixin text-shadow {
+  text-shadow: 0 1px 1px rgba($black, .2);
+}
+
+@mixin text-shadow-darker {
+  text-shadow: 0 1px 1px rgba($black, .5);
+}
+
+@mixin text-shadow-darkest {
+  text-shadow: 0 0 3px rgba(0, 0, 0, .5), 0 0 5px rgba(0, 0, 0, .7);
+}
+
+@mixin btn-text-shadow {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+}
+
+@mixin font-smoothing-grayscale {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+// TODO: Remove this ignore directive when the Gonzales PE fix is also included in the sc5-styleguide project https://github.com/SC5/sc5-styleguide/issues/577#issuecomment-134063215
+// styleguide:ignore:start
+@mixin vertical-align($property, $container-height, $element-height) {
+  #{$property}-top: valign-offset($container-height, $element-height);
+  #{$property}-bottom: valign-offset($container-height, $element-height);
+}
+// styleguide:ignore:end
+
+@mixin navbar-vertical-align($element-height) {
+  @include vertical-align('margin', $navbar-height, $element-height);
+}
+
+@mixin navbar-vertical-align-padding($element-height) {
+  @include vertical-align('padding', $navbar-height, $element-height);
+}
+
+@mixin sidebar-vertical-align($element-height) {
+  @include vertical-align('margin', $sidebar-height, $element-height);
+}
+
+@mixin sidebar-vertical-align-padding($element-height) {
+  @include vertical-align('padding', $sidebar-height, $element-height);
+}
+
+@mixin font-awesome-icon($icon) {
+  @include fa-icon;
+  content: $icon;
+}
+
+@mixin ku-icon {
+  display: inline-block;
+  font-family: "kununu";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+@mixin force-wrap {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@mixin vertical-middle-block {
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -.25em;
+  }
+}
+
+@mixin vertical-middle-block-content {
+  vertical-align: middle;
+  display: inline-block;
+}

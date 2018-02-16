@@ -1,0 +1,98 @@
+.vertical-middle-block {
+  @include vertical-middle-block;
+
+  .vertical-middle-content {
+    @include vertical-middle-block-content;
+  }
+}
+
+.vertical-middle { vertical-align: middle; }
+.vertical-bottom { vertical-align: bottom; }
+
+%absolute {
+  position: absolute;
+}
+
+.static { position: static; }
+.relative { position: relative; }
+
+.absolute {
+  @extend %absolute;
+}
+
+.bottom {
+  @extend %absolute;
+  bottom: 0;
+
+  &.tooltip {
+    bottom: auto;
+  }
+}
+
+.top-right-bottom {
+  @extend %absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.top-bottom-left {
+  @extend %absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.top-negative-gutter-right {
+  @extend %absolute;
+  top: -$grid-gutter-width / 2;
+  right: 0;
+}
+
+.bottom-double-gutter-center {
+  @include translate(-50%, 0);
+  @extend %absolute;
+  bottom: $grid-gutter-width;
+  left: 50%;
+}
+
+.top-right-bottom-left-all-gutter {
+  @extend %absolute;
+  top: $grid-gutter-width / 2;
+  right: $grid-gutter-width / 2;
+  bottom: $grid-gutter-width / 2;
+  left: $grid-gutter-width / 2;
+}
+
+.top-offset {
+  @extend %absolute;
+  top: 10px;
+}
+
+.left-offset {
+  @extend %absolute;
+  left: 10px;
+}
+
+.right-gutter {
+  @extend %absolute;
+  right: $grid-gutter-width;
+}
+
+.block-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon-center {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -.5em;
+  text-align: center;
+}
+
+img.pull-right {
+  margin: 0 0 $grid-gutter-width $grid-gutter-width;
+}

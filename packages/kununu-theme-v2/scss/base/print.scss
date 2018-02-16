@@ -1,0 +1,35 @@
+@media print {
+
+  body {
+    padding-top: 0px;
+  }
+
+  a[href]:after {
+    content: "";
+  }
+
+  .pagebreak-before {
+    page-break-before: always !important;
+  }
+
+  .no-pagebreak {
+    page-break-inside: avoid;
+  }
+
+  .table-striped {
+    th {
+      text-align: center;
+      padding: 12px 18px;
+      vertical-align: middle;
+      font-size: 16px;
+    }
+  }
+
+  .printer-hidden {
+    display: none !important;
+  }
+
+  .printer-visible {
+    display: block !important;
+  }
+}

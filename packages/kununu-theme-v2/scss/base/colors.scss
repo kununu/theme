@@ -1,0 +1,412 @@
+// Colors
+//
+// These are our main colors to be used for typography and interface components.
+//
+// Styleguide 1.0
+
+// Theme Colors
+//
+// .green           -  Primary Color
+// .green-light     -  Primary Color, light
+// .green-dark      -  Primary Color, dark
+// .blue            -  Secondary Color
+// .blue-light      -  Secondary Color, light
+// .blue-dark       -  Secondary Color, dark
+// .orange          -  ...
+// .orange-light    -  ...
+// .orange-dark     -  ...
+//
+// markup:
+//<div class="sg-colorswatches {$modifiers} "><b>&dollar;{$modifiers}</b> ${$modifiers}</div>
+//
+// Styleguide 1.1
+
+// Interface &amp; Typography Colors
+//
+// .gray-base       -  Interface: Header, Footer
+// .gray-base-90    -  Typography: H1 - H5
+// .gray-base-80    -  Typography: Paragraphs
+// .gray-base-70    -  ...
+// .gray-base-60    -  Typography: Small Paragraphs
+// .gray-base-50    -  Typography: H6
+// .gray-base-40    -  ...
+// .gray-base-30    -  ...
+// .gray-base-20    -  ...
+// .gray-base-10    -  ...
+// .gray-base-03    -  Interface: Background
+//
+// markup:
+//<div class="sg-colorswatches {$modifiers} "><b>&dollar;{$modifiers}</b> ${$modifiers}</div>
+//
+// Styleguide 1.2
+
+
+%text-white {
+  color: $white;
+}
+
+%orange-gradient {
+  @extend %text-white;
+  @include gradient-vertical($start-color: $orange, $end-color: $orange-dark);
+}
+
+// Color Swatches
+// -------------------------
+
+// TODO: Don't use the sg-colorswatches class (or any other styleguide-specific styles, for that matter). Use the existing components to demonstrate the colors.
+
+.sg-colorswatches {
+  height: 100px;
+  padding: 2em;
+  border-radius: 5px;
+}
+
+// Monotone
+// -------------------------
+
+.gray-base {
+  @extend %text-white;
+  background: $gray-base;
+}
+
+.gray-base-03 {
+  color: $gray-base-70;
+  background: $gray-base-03;
+}
+
+.gray-base-10 {
+  color: $gray-base-80;
+  background: $gray-base-10;
+}
+
+.gray-base-20 {
+  @extend %text-white;
+  background: $gray-base-20;
+}
+
+.gray-base-30 {
+  @extend %text-white;
+  background: $gray-base-30;
+}
+
+.gray-base-40 {
+  @extend %text-white;
+  background: $gray-base-40;
+}
+
+.gray-base-50 {
+  @extend %text-white;
+  background: $gray-base-50;
+}
+
+.gray-base-60 {
+  @extend %text-white;
+  background: $gray-base-60;
+}
+
+.gray-base-70 {
+  @extend %text-white;
+  background: $gray-base-70;
+}
+
+.gray-base-80 {
+  @extend %text-white;
+  background: $gray-base-80;
+}
+
+.gray-base-90 {
+  @extend %text-white;
+  background: $gray-base-90;
+}
+
+// Colors
+// -------------------------
+
+.green {
+  @extend %text-white;
+  background: $green;
+}
+
+.green-light {
+  @extend %text-white;
+  background: $green-light;
+}
+
+.green-dark {
+  @extend %text-white;
+  background: $green-dark;
+}
+
+.blue {
+  @extend %text-white;
+  background: $blue;
+}
+
+.blue-lighter {
+  @extend %text-white;
+  background: $blue-lighter;
+}
+
+.blue-light {
+  @extend %text-white;
+  background: $blue-light;
+}
+
+.blue-dark {
+  @extend %text-white;
+  background: $blue-dark;
+}
+
+.teal {
+  @extend %text-white;
+  background: $teal;
+}
+
+.bg-tile {
+  background: $gray-base-03;
+}
+
+.teal-sat {
+  @extend %text-white;
+  background: $teal-sat;
+}
+
+.teal-light {
+  @extend %text-white;
+  background: $teal-light;
+}
+
+.teal-dark {
+  @extend %text-white;
+  background: $teal-dark;
+}
+
+.teal-darker {
+  @extend %text-white;
+  background: $teal-darker;
+}
+
+.red {
+  @extend %text-white;
+  background: $red;
+}
+
+.orange {
+  @extend %text-white;
+  background: $orange;
+}
+
+.orange-lighter {
+  @extend %text-white;
+  background: $orange-lighter;
+}
+
+.orange-light {
+  @extend %text-white;
+  background: $orange-light;
+}
+
+.orange-dark {
+  @extend %text-white;
+  background: $orange-dark;
+}
+
+.white {
+  background: $white;
+}
+
+.gray {
+  @extend %text-white;
+  background: $gray;
+}
+
+.gray-light {
+  @extend %text-white;
+  background: $gray-light;
+}
+
+.gray-lightest {
+  background: $gray-lightest;
+}
+
+.facebook-blue {
+  @extend %text-white;
+  background: $facebook-blue;
+}
+
+.twitter-blue {
+  @extend %text-white;
+  background: $twitter-blue;
+}
+
+.google-red {
+  @extend %text-white;
+  background: $google-red;
+}
+
+.youtube-red {
+  @extend %text-white;
+  background: $youtube-red;
+}
+
+.linkedin-blue {
+  @extend %text-white;
+  background: $linkedin-blue;
+}
+
+.xing-green {
+  @extend %text-white;
+  background: $xing-green;
+}
+
+.white-gradient {
+  @include gradient-vertical($start-color: $white, $end-color: $gray-lightest);
+}
+
+.green-gradient {
+  @extend %text-white;
+  @include gradient-vertical($start-color: $green, $end-color: $green-dark);
+}
+
+.red-gradient {
+  @extend %text-white;
+  @include gradient-vertical($start-color: $red, $end-color: $red-dark);
+}
+
+.orange-gradient {
+  @extend %orange-gradient;
+}
+
+.blue-gradient {
+  @extend %text-white;
+  @include gradient-vertical($start-color: $blue, $end-color: $blue-dark);
+}
+
+.teal-gradient {
+  @extend %text-white;
+  @include gradient-vertical($start-color: $teal, $end-color: $teal-dark);
+}
+
+.black-transparent-gradient {
+  @include gradient-vertical($start-color: rgba(255, 255, 255, 0), $end-color: rgba(0, 0, 0, .5));
+}
+
+.white-transparent-gradient {
+  @include gradient-vertical($start-color: rgba(255, 255, 255, 0), $end-color: rgba(255, 255, 255, 1), $start-percent: 50%);
+}
+
+.text-white {
+  @extend %text-white;
+}
+
+.text-gray-light {
+  color: $gray-light;
+}
+
+.text-gray-base-50 {
+  color: $gray-base-50;
+}
+
+.text-gray-base-70 {
+  color: $gray-base-70;
+}
+
+.text-green {
+  color: $green;
+}
+
+.text-green-dark {
+  color: $green-dark;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.text-blue {
+  color: $blue;
+}
+
+.text-red {
+  color: $red;
+}
+
+.text-gold {
+  color: $gold;
+}
+
+.text-muted-light {
+  color: $text-muted-light;
+}
+
+.text-muted {
+  color: $text-muted;
+}
+
+.text-muted-dark {
+  color: $text-muted-dark;
+}
+
+.text-body {
+  color: $text-color;
+}
+
+.text-headline {
+  color: $gray-base;
+}
+
+.text-teal-sat {
+  color: $teal-sat;
+}
+
+.border-gray-lighter {
+  border: 1px solid $gray-light;
+}
+
+.border-green {
+  border: 1px solid $green-dark;
+}
+
+.border-green-light {
+  border: 1px solid $green;
+}
+
+.border-orange {
+  border: 1px solid $orange-dark;
+}
+
+.border-blue {
+  border: 1px solid $blue-dark;
+}
+
+.border-color-gray {
+  border-color: $gray;
+}
+
+.border-color-white {
+  border-color: $white;
+}
+
+.border-color-gray-light {
+  border-color: $gray-light;
+}
+
+.border-color-green {
+  border-color: $green;
+}
+
+.border-color-green-dark {
+  border-color: darken($green-dark, 5%);
+}
+
+.border-color-orange {
+  border-color: $orange;
+}
+
+.border-color-orange-dark {
+  border-color: darken($orange-dark, 5%);
+}
+
+.border-color-blue {
+  border-color: $blue-dark;
+}

@@ -1,0 +1,41 @@
+.flex { display: flex; flex-wrap: wrap; }
+.flex-column { display: flex; flex-direction: column; }
+
+%justify-space-between { justify-content: space-between; }
+
+.flex-margin-between {
+  @extend %justify-space-between;
+  > * {
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+      flex: 1;
+      margin-right: $grid-gutter-width;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.flex-space-between-2 {
+  @extend %justify-space-between;
+  > * {
+    width: 49%;
+  }
+}
+
+// Fallbacks for non-flexbox browsers
+html.no-flexbox {
+  .flex {
+    display: table;
+  }
+
+  .flex-margin-between,
+  .flex-space-between-2 {
+    > * {
+      display: table-cell;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "kununu-theme-v2",
+  "name": "@kununu/kununu-theme-v2",
   "version": "1.0.0",
   "description": "Base scss styles for kununu applications",
   "scripts": {

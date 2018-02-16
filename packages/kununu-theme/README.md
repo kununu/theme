@@ -1,6 +1,6 @@
 # kununu-theme
 
-kununu's basic styling
+kununu basic styling v1 - used for the monolith
 
 All the styles are scss and need to be compiled.
 

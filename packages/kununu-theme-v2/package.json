@@ -1,0 +1,21 @@
+{
+  "name": "kununu-theme-v2",
+  "version": "1.0.0",
+  "description": "Base scss styles for kununu applications",
+  "scripts": {
+    "test": "echo \"No test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kununu/theme.git"
+  },
+  "keywords": [
+    "kununu-theme-v2"
+  ],
+  "author": "kununu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kununu/theme/issues"
+  },
+  "homepage": "https://github.com/kununu/theme#readme"
+}

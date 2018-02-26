@@ -1,65 +1,7 @@
-// Colors
-//
-// These are our main colors to be used for typography and interface components.
-//
-// Styleguide 1.0
-
-// Theme Colors
-//
-// .green           -  Primary Color
-// .green-light     -  Primary Color, light
-// .green-dark      -  Primary Color, dark
-// .blue            -  Secondary Color
-// .blue-light      -  Secondary Color, light
-// .blue-dark       -  Secondary Color, dark
-// .orange          -  ...
-// .orange-light    -  ...
-// .orange-dark     -  ...
-//
-// markup:
-//<div class="sg-colorswatches {$modifiers} "><b>&dollar;{$modifiers}</b> ${$modifiers}</div>
-//
-// Styleguide 1.1
-
-// Interface &amp; Typography Colors
-//
-// .gray-base       -  Interface: Header, Footer
-// .gray-base-90    -  Typography: H1 - H5
-// .gray-base-80    -  Typography: Paragraphs
-// .gray-base-70    -  ...
-// .gray-base-60    -  Typography: Small Paragraphs
-// .gray-base-50    -  Typography: H6
-// .gray-base-40    -  ...
-// .gray-base-30    -  ...
-// .gray-base-20    -  ...
-// .gray-base-10    -  ...
-// .gray-base-03    -  Interface: Background
-//
-// markup:
-//<div class="sg-colorswatches {$modifiers} "><b>&dollar;{$modifiers}</b> ${$modifiers}</div>
-//
-// Styleguide 1.2
-
-
 %text-white {
   color: $white;
 }
 
-%orange-gradient {
-  @extend %text-white;
-  @include gradient-vertical($start-color: $orange, $end-color: $orange-dark);
-}
-
-// Color Swatches
-// -------------------------
-
-// TODO: Don't use the sg-colorswatches class (or any other styleguide-specific styles, for that matter). Use the existing components to demonstrate the colors.
-
-.sg-colorswatches {
-  height: 100px;
-  padding: 2em;
-  border-radius: 5px;
-}
 
 // Monotone
 // -------------------------
@@ -162,10 +104,6 @@
   background: $teal;
 }
 
-.bg-tile {
-  background: $gray-base-03;
-}
-
 .teal-sat {
   @extend %text-white;
   background: $teal-sat;
@@ -257,42 +195,6 @@
 .xing-green {
   @extend %text-white;
   background: $xing-green;
-}
-
-.white-gradient {
-  @include gradient-vertical($start-color: $white, $end-color: $gray-lightest);
-}
-
-.green-gradient {
-  @extend %text-white;
-  @include gradient-vertical($start-color: $green, $end-color: $green-dark);
-}
-
-.red-gradient {
-  @extend %text-white;
-  @include gradient-vertical($start-color: $red, $end-color: $red-dark);
-}
-
-.orange-gradient {
-  @extend %orange-gradient;
-}
-
-.blue-gradient {
-  @extend %text-white;
-  @include gradient-vertical($start-color: $blue, $end-color: $blue-dark);
-}
-
-.teal-gradient {
-  @extend %text-white;
-  @include gradient-vertical($start-color: $teal, $end-color: $teal-dark);
-}
-
-.black-transparent-gradient {
-  @include gradient-vertical($start-color: rgba(255, 255, 255, 0), $end-color: rgba(0, 0, 0, .5));
-}
-
-.white-transparent-gradient {
-  @include gradient-vertical($start-color: rgba(255, 255, 255, 0), $end-color: rgba(255, 255, 255, 1), $start-percent: 50%);
 }
 
 .text-white {

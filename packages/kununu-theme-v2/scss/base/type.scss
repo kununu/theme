@@ -1,90 +1,3 @@
-// Typography
-//
-// We follow a 6px baseline grid for achieving a vertical rhythm.<br/>
-// For margins and paddings on block level elements use a multiple of <code>$baseline-grid</code>.<br/>
-// The default body text is 18px. For optimum reading length use 60 - 90 characters per line.<br/>
-// Recommendation: 6 - 7 columns on desktop view.
-//
-// Styleguide 2.0
-
-// Headings
-//
-// markup:
-// <h1>Heading 1: Lorem ipsum dolor sit amet</h1>
-// <h2>Heading 2: Lorem ipsum dolor sit amet</h2>
-// <h3>Heading 3: Lorem ipsum dolor sit amet</h3>
-// <h4>Heading 4: Lorem ipsum dolor sit amet</h4>
-// <h5>Heading 5: Lorem ipsum dolor sit amet</h5>
-// <h6>Heading 6: Lorem ipsum dolor sit amet</h6>
-// <div class="widget">
-//  <h6>Heading 6 Widget: Lorem ipsum dolor sit amet</h6>
-// </div>
-//
-// Styleguide 2.1
-
-// Paragraphs
-//
-// .small         - Small Text
-//
-// markup:
-// <div class="col-xs-7">
-//    <h3>Default Paragraph 18/26</h3>
-//    <p>Default Paragraph: Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus <a href="">linked text</a> dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus.</p>
-// </div>
-// <div class="col-xs-4">
-//    <h3>Small Paragraph 13/18</h3>
-//    <p class="{$modifiers}">Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus.</p>
-// </div>
-//
-// Styleguide 2.2
-
-// Layout - Default
-//
-// <strong>Primary Sidebar</strong><br/>
-// Desktop View: 3 columns<br/><br/>
-// <strong>Main Content</strong><br/>
-// Desktop View: 7 columns<br/><br/>
-// <strong>Secondary Sidebar</strong><br/>
-// Desktop View: 2 columns
-//
-// markup:
-// <div class="col-xs-3">Primary</div>
-// <div class="col-xs-7">Main</div>
-// <div class="col-xs-2">Secondary</div>
-// <div class="col-xs-3">
-//    <div class="widget">
-//      <h6>Widget Headline</h6>
-//      <p class="small">Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-//    </div>
-// </div>
-// <div class="col-xs-7">
-//    <h1>H1 Main Headline</h1>
-//    <p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus <a href="">linked text</a> dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis non mi porta gravida at eget metus.</p>
-//    <h2>H2 Subheadline</h2>
-//    <p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus <a href="">linked text</a> dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida.</p>
-//    <h3>H3 Subheadline</h3>
-//    <p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus <a href="">linked text</a> dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida.</p>
-//    <a href="" class="text-link small">Weiter Lesen</a>
-// </div>
-// <div class="col-xs-2">
-//    <div class="widget">
-//       <h6>Widget Headline</h6>
-//       <p class="small">Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus.</p>
-//    </div>
-//    <div class="widget companyinfo">
-//        <h6>Companyinfo</h6>
-//            <ul>
-//                <li><span class="h6">Headquarter</span><p>Stuttgart, Deutschland</p></li>
-//                <li><span class="h6">Umsatz</span><p>rund 49 Mrd. Euro Umsatz weltweit</p></li>
-//                <li><span class="h6">Branche</span><p><a href="">Industrie</a></p></li>
-//                <li><span class="h6">Mitarbeiter</span><p>rund 360.000 weltweit, davon 105.000 in Deutschland</p></li>
-//                <li><span class="h6">Website</span><p><a href="">www.bosch.de</a></p></li>
-//             </ul>
-//     </div>
-// </div>
-//
-// Styleguide 2.3
-
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -93,20 +6,6 @@ h5, .h5,
 h6, .h6 {
   margin: 0;
   padding: 0;
-}
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  small,
-  .small {
-    font-size: 75%;
-    padding-left: 4px;
-    padding-right: 4px;
-  }
 }
 
 h1, .h1 {
@@ -178,17 +77,8 @@ p {
   }
 }
 
-.us-layout p {
-  font-size: $font-size-h4;
-  line-height: 1.65;
-}
-
 #footer p {
   color: $gray-base-30;
-}
-
-#footer h3 {
-  color: $gray-base-10;
 }
 
 .text-bold {
@@ -262,13 +152,6 @@ p {
   font-size: $font-size-base;
 }
 
-.text-body-copy {
-  margin: 0;
-  font-size: $font-size-base;
-  font-weight: $font-weight-regular;
-  line-height: $line-height-base;
-}
-
 .text-sm {
   font-size: $font-size-sm;
 }
@@ -283,38 +166,6 @@ p {
 
 .text-monospace {
   font-family: $font-family-monospace;
-}
-
-.dl-horizontal dt {
-  width: ($component-offset-horizontal - 12);
-  color: $text-muted;
-  text-align: left;
-  text-transform: uppercase;
-  font-size: $font-size-sm;
-  font-weight: $font-weight-regular;
-  line-height: 19px;
-  padding-top: 1px;
-  margin: 0;
-}
-
-.dl-horizontal-bold dt {
-  color: $text-color;
-  font-weight: $font-weight-bold;
-}
-
-.dl-horizontal-md dt {
-  width: 130px;
-}
-
-.dl-horizontal-long dt {
-  width: 195px;
-}
-
-.dl-horizontal-normalcase dt {
-  text-transform: none;
-}
-
-h1, .h1, .text-jumbo {
 }
 
 @media (max-width: $screen-xs-max) {

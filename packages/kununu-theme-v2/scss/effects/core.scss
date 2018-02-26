@@ -3,88 +3,9 @@
   padding: 0;
 }
 
-.matted {
-  background: $white;
-  padding: 4px;
-}
-
-.matted-border-lg {
-  border: 8px solid $white;
-}
-
-.matted-border {
-  border: 4px solid $white;
-}
-
-.matted-border-sm {
-  border: 3px solid $white;
-}
-
-.shadow {
-  @include box-shadow(0 1px 4px rgba($black, .25));
-  margin-bottom: 3px;
-}
-
-.shadow-lg {
-  @include box-shadow(0 1px 15px rgba($black, .25));
-  margin-bottom: 3px;
-}
-
-.text-shadow {
-  @include text-shadow;
-}
-
-.text-shadow-darker {
-  @include text-shadow-darker;
-}
-
-.text-shadow-darkest {
-  @include text-shadow-darker;
-}
-
-.rounded-sm {
-  border-radius: $border-radius-sm;
-}
-
-.rounded-top-left {
-  border-top-left-radius: $border-radius-base;
-}
-
-.rounded-top-right {
-  border-top-right-radius: $border-radius-base;
-}
-
-.rounded-bottom-left {
-  border-bottom-left-radius: $border-radius-base;
-}
-
-.rounded-bottom-right {
-  border-bottom-right-radius: $border-radius-base;
-}
-
-.rounded-top {
-  @include border-top-radius($border-radius-base);
-}
-
-.rounded-bottom {
-  @include border-bottom-radius($border-radius-base);
-}
-
-.rounded {
-  border-radius: $border-radius-base;
-}
-
-.rounded-top-left-lg {
-  border-top-left-radius: $border-radius-lg;
-}
-
-.rounded-top-right-lg {
-  border-top-right-radius: $border-radius-lg;
-}
-
-.rotate-neg-90 {
-  @include rotate(-90deg);
-}
+.static { position: static; }
+.relative { position: relative; }
+.absolute { position: absolute; }
 
 .overflow-hide {
   overflow: hidden;
@@ -96,75 +17,6 @@
 
 .no-wrap {
   white-space: nowrap;
-}
-
-.squared-top {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-.squared-left {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.no-max-width img {
-  max-width: none;
-}
-
-.no-border {
-  border: 0;
-}
-
-.no-border-top {
-  border-top: 0;
-}
-
-.no-border-radius {
-  border-radius: 0;
-}
-
-.no-padding-top {
-  padding-top: 0;
-}
-
-.no-padding-bottom {
-  padding-bottom: 0;
-}
-
-.no-margin {
-  margin: 0;
-}
-
-.no-margin-top {
-  margin-top: 0;
-}
-
-.no-margin-bottom {
-  margin-bottom: 0;
-}
-
-.no-margin-left {
-  margin-left: 0;
-}
-
-.no-margin-right {
-  margin-right: 0;
-}
-
-.border {
-  border: 1px solid $gray-light;
-}
-
-.border-bottom {
-  border-bottom: 1px solid $panel-border;
-}
-
-.border-bottom-double {
-  border-bottom: 2px solid $gray-light;
-}
-
-.no-border {
-  border: 0;
 }
 
 .padding {
@@ -233,18 +85,6 @@
 
 .padding-left-half {
   padding-left: $grid-gutter-width / 2;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.no-padding-left {
-  padding-left: 0;
-}
-
-.no-padding-right {
-  padding-right: 0;
 }
 
 .margin {
@@ -334,70 +174,6 @@
   @extend .margin-right-half;
 }
 
-.isolated-more {
-  padding: 100px 0;
-}
-
-.isolated {
-  padding: 50px 0;
-}
-
-.bg-top {
-  background-position: center top;
-}
-
-.bg-bottom {
-  background-position: center bottom;
-}
-
-.img-centered {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.point,
-.point-bottom,
-.point-bottom-orange,
-.point-right {
-  position: relative;
-
-  &:before {
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    border: solid transparent;
-  }
-}
-
-[ku-grayscale] {
-  // Firefox 10-34
-  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale");
-
-  // Chrome 19+, Safari 6+, Safari 6+ iOS, Opera 15+
-  -webkit-filter: grayscale(1);
-
-  // Firefox 35+
-  filter: grayscale(1);
-
-  // IE 6-9
-  filter: gray;
-}
-
-.opacity-half {
-  opacity: .5;
-
-  &[ku-grayscale] {
-    filter: gray
-            alpha(opacity=50);
-  }
-}
-
-.opacity-third {
-  @include opacity(.4);
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -416,41 +192,6 @@
 
 .pointer-disabled {
   pointer-events: none;
-}
-
-.fade-to-white-overlay {
-  position: absolute;
-
-  .pointerevents & {
-    @include gradient-vertical-four-colors(rgba(#fff, 0), rgba(#fff, 0), rgba(#fff, .6), #fff, 0%, 40%, 60%, 100%);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    pointer-events: none;
-  }
-}
-
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
-}
-
-[ng-click] {
-  cursor: pointer;
-}
-
-@media (max-width: $screen-sm-max) {
-  .no-padding-mobile {
-    > [class*="col-"] {
-      padding: 0;
-    }
-  }
-}
-
-@media (max-width: $screen-xs-max) {
-  .margin-top-half-xs {
-    margin-top: $grid-gutter-width / 2;
-  }
 }
 
 .bullet-after:after {

@@ -1,4 +1,5 @@
-.panel {
+.panel,
+.card {
   border-bottom: 2px solid $gray-lighter;
   position: relative;
   background-color: $panel-bg;
@@ -23,7 +24,8 @@
 }
 
 // Panel contents
-.panel-body {
+.panel-body,
+.card-body {
   @include clearfix();
   padding: $panel-padding;
   font-size: $font-size-h4;
@@ -43,7 +45,8 @@
 }
 
 // Optional heading
-.panel-heading {
+.panel-heading,
+.card-heading {
   padding: $panel-padding;
   background-color: $gray-lightest;
   border-bottom: 1px solid $blue-light-sat;
@@ -64,7 +67,8 @@
   }
 }
 
-.panel-body {
+.panel-body,
+.card-body {
   h1,
   h2,
   h3,
@@ -78,30 +82,8 @@
 }
 
 // Optional footer (stays gray in every modifier class)
-.panel-footer {
+.panel-footer,
+.card-footer {
   padding: $panel-padding;
   background-color: $panel-footer-bg;
-}
-
-// Style Guide Color Swatches
-.panel-colorswatches {
-  margin-bottom: 2em;
-  background: $white;
-  padding: .5em;
-  border-radius: .25em;
-}
-
-.panel-colorswatches p {
-  font-size: $font-size-smaller;
-  color: $gray-base-50;
-  line-height: 1.75em;
-}
-
-.panel-colorswatches .panel-body {
-  padding: .5em 1em 1em 1em;
-}
-
-.panel-colorswatches code {
-  color: $gray-base;
-  background: $gray-base-03;
 }

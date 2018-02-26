@@ -7,7 +7,6 @@ body {
 }
 
 body {
-  @include font-smoothing-grayscale;
   padding-top: $navbar-height;
 
   > header.navbar {
@@ -16,7 +15,7 @@ body {
 
   > main {
     min-height: 100%;
-    padding-bottom: 60px;
+    overflow: auto;
   }
 
   > footer {
@@ -30,16 +29,6 @@ body {
 
 a {
   @include transition(.25s color);
-}
-
-// TODO: Do we really want to do this?
-img {
-  @extend .img-responsive;
-}
-
-img,
-.img-thumbnail {
-  width: auto \9; // Override Bootstrap fix for SVG images in IE10 and below
 }
 
 iframe {

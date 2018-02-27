@@ -5,13 +5,6 @@
   margin-right: auto;
   max-width: 1450px;
 
-  // TODO: Clean up this mess someday
-  @media (max-width: $screen-sm-max) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  // TODO: Clean up this mess someday
   @media (max-width: $screen-xs-max) {
     padding-left: $grid-gutter-width / 4;
     padding-right: $grid-gutter-width / 4;
@@ -23,7 +16,8 @@
     margin-left: -$grid-gutter-width / 4;
     margin-right: -$grid-gutter-width / 4;
 
-    > [class*="col-"] {
+    > .col,
+    [class*="col-"] {
       padding-left: $grid-gutter-width / 4;
       padding-right: $grid-gutter-width / 4;
     }

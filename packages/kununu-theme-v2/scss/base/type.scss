@@ -109,29 +109,6 @@ p {
   text-decoration: underline;
 }
 
-.text-jumbo {
-  font-size: $font-size-jumbo;
-
-  @media (max-width: $screen-md-max) {
-    font-size: 18px;
-  }
-}
-
-.heading-xxl {
-  color: $white;
-  font-size: $font-size-xxl + 12;
-  line-height: $line-height-xxl + 14;
-
-  @media (max-width: $screen-sm-max) {
-    font-size: $font-size-xxl + 6;
-  }
-
-  @media (max-width: $screen-sm-min) {
-    font-size: $font-size-xxl;
-    line-height: $line-height-xxl;
-  }
-}
-
 .text-xxl {
   font-size: $font-size-xxl;
 }

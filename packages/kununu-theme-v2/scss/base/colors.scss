@@ -104,49 +104,9 @@
   background: $teal;
 }
 
-.teal-sat {
-  @extend %text-white;
-  background: $teal-sat;
-}
-
-.teal-light {
-  @extend %text-white;
-  background: $teal-light;
-}
-
-.teal-dark {
-  @extend %text-white;
-  background: $teal-dark;
-}
-
-.teal-darker {
-  @extend %text-white;
-  background: $teal-darker;
-}
-
 .red {
   @extend %text-white;
   background: $red;
-}
-
-.orange {
-  @extend %text-white;
-  background: $orange;
-}
-
-.orange-lighter {
-  @extend %text-white;
-  background: $orange-lighter;
-}
-
-.orange-light {
-  @extend %text-white;
-  background: $orange-light;
-}
-
-.orange-dark {
-  @extend %text-white;
-  background: $orange-dark;
 }
 
 .white {
@@ -221,32 +181,12 @@
   color: $green-dark;
 }
 
-.text-orange {
-  color: $orange;
-}
-
 .text-blue {
   color: $blue;
 }
 
 .text-red {
   color: $red;
-}
-
-.text-gold {
-  color: $gold;
-}
-
-.text-muted-light {
-  color: $text-muted-light;
-}
-
-.text-muted {
-  color: $text-muted;
-}
-
-.text-muted-dark {
-  color: $text-muted-dark;
 }
 
 .text-body {
@@ -257,24 +197,12 @@
   color: $gray-base;
 }
 
-.text-teal-sat {
-  color: $teal-sat;
-}
-
-.border-gray-lighter {
-  border: 1px solid $gray-light;
-}
-
 .border-green {
   border: 1px solid $green-dark;
 }
 
 .border-green-light {
   border: 1px solid $green;
-}
-
-.border-orange {
-  border: 1px solid $orange-dark;
 }
 
 .border-blue {
@@ -299,14 +227,6 @@
 
 .border-color-green-dark {
   border-color: darken($green-dark, 5%);
-}
-
-.border-color-orange {
-  border-color: $orange;
-}
-
-.border-color-orange-dark {
-  border-color: darken($orange-dark, 5%);
 }
 
 .border-color-blue {

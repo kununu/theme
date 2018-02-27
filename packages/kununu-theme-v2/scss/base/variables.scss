@@ -117,6 +117,9 @@ $font-weight-regular:        400;
 $font-weight-semibold:       600;
 $font-weight-bold:           700;
 
+$headings-color:             $gray-base-90;
+$headings-font-weight:       $font-weight-semibold;
+
 // // Components
 // // -------------------------
 
@@ -240,6 +243,14 @@ $grid-float-breakpoint:     0;
 // -------------------------
 
 $navbar-height:                       60px;
+$navbar-default-color:                $white;
+$navbar-default-bg:                   $teal;
+
+// Type
+// ------------------------
+$text-muted-light:               lighten($gray, 40%);
+$text-muted:                     $gray-base-40;
+$text-muted-dark:                $gray-base-60;
 
 
 // Panels (Bootstrap v4 = cards)

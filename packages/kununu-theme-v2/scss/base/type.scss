@@ -8,6 +8,20 @@ h6, .h6 {
   padding: 0;
 }
 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  small,
+  .small {
+    font-size: 75%;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
 h1, .h1 {
   @media (max-width: $screen-md-max) {
     font-size: 18px;
@@ -77,8 +91,17 @@ p {
   }
 }
 
+.us-layout p {
+  font-size: $font-size-h4;
+  line-height: 1.65;
+}
+
 #footer p {
   color: $gray-base-30;
+}
+
+#footer h3 {
+  color: $gray-base-10;
 }
 
 .text-bold {
@@ -109,14 +132,6 @@ p {
   text-decoration: underline;
 }
 
-.text-xxl {
-  font-size: $font-size-xxl;
-}
-
-.text-xl {
-  font-size: $font-size-xl;
-}
-
 .text-lg {
   font-size: $font-size-lg;
 }
@@ -127,6 +142,13 @@ p {
 
 .text-base {
   font-size: $font-size-base;
+}
+
+.text-body-copy {
+  margin: 0;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-base;
 }
 
 .text-sm {
@@ -143,6 +165,38 @@ p {
 
 .text-monospace {
   font-family: $font-family-monospace;
+}
+
+.dl-horizontal dt {
+  width: ($component-offset-horizontal - 12);
+  color: $text-muted;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-regular;
+  line-height: 19px;
+  padding-top: 1px;
+  margin: 0;
+}
+
+.dl-horizontal-bold dt {
+  color: $text-color;
+  font-weight: $font-weight-bold;
+}
+
+.dl-horizontal-md dt {
+  width: 130px;
+}
+
+.dl-horizontal-long dt {
+  width: 195px;
+}
+
+.dl-horizontal-normalcase dt {
+  text-transform: none;
+}
+
+h1, .h1, .text-jumbo {
 }
 
 @media (max-width: $screen-xs-max) {

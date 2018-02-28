@@ -123,3 +123,13 @@ p {
 
 // Still used in homepage, mykununu sidebar
 .text-center  { text-align: center; }
+
+// Still used in the footer
+@media (max-width: $screen-xs-max) {
+  .text-center-xs { text-align: center; }
+}
+
+// Still used in the footer
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .text-center-sm { text-align: center; }
+}

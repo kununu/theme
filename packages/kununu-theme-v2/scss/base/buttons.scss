@@ -28,6 +28,11 @@
   border-color: transparent;
 }
 
+// Still used in header
+.btn-dd-sm {
+  font-size: $font-size-small;
+}
+
 .btn-secondary {
   color: $btn-secondary-color;
   background-color: $btn-secondary-bg;

@@ -147,7 +147,6 @@ label.block.optional {
   color: $gray-base-90;
   font-size: $font-size-base;
   font-weight: $font-weight-semibold;
-  letter-spacing: -.01em;
 
   &.control-label-no-padding-top {
     padding-top: 0;
@@ -219,6 +218,7 @@ label.block.optional {
   color: $gray-base-30;
   float: right;
   font-family: $font-family-sans-serif;
+  font-weight: 400;
   font-size: $font-size-xs;
   font-style: italic;
   padding-top: $baseline-grid;
@@ -372,7 +372,7 @@ input.checkbox {
   + label {
     color: $gray-base-80;
     cursor: pointer;
-    font-weight: normal;
+    font-weight: $font-weight-semibold;
     padding-left: 30px;
     letter-spacing: -.01em;
 

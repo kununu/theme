@@ -1,0 +1,46 @@
+.btn {
+  text-shadow: none;
+  font-weight: $font-weight-semibold;
+  border-radius: $border-radius-sm;
+
+  // Changed from btn-default to btn-secondardy in bootstrap v4
+  &.btn-secondary.active {
+    @include box-shadow(none);
+  }
+
+  @media (max-width: $screen-xs-max) {
+    white-space: normal;
+  }
+}
+
+.btn-primary,
+.btn-default,
+.btn-warning,
+.btn-danger,
+.btn-secondary {
+  font-weight: $font-weight-semibold;
+}
+
+.btn-primary,
+.btn-warning,
+.btn-danger,
+.btn-secondary {
+  border-color: transparent;
+}
+
+// Still used in header
+.btn-dd-sm {
+  font-size: $font-size-small;
+}
+
+.btn-secondary {
+  color: $btn-secondary-color;
+  background-color: $btn-secondary-bg;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $btn-secondary-hover;
+  }
+}

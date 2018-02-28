@@ -47,7 +47,6 @@ a.text-link {
   color: $blue-light;
   text-transform: uppercase;
   font-weight: $font-weight-semibold;
-  letter-spacing: .02em;
   font-size: 80%;
   margin-top: $baseline-grid * 3;
   margin-bottom: $baseline-grid * 3;
@@ -66,7 +65,6 @@ a.text-link {
 a.text-link.small {
   font-size: 70%;
   font-weight: $font-weight-bold;
-  letter-spacing: .1em;
   padding-bottom: $baseline-grid - 1;
 }
 

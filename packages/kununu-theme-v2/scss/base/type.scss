@@ -1,0 +1,135 @@
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  small,
+  .small {
+    font-size: 75%;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
+h1, .h1 {
+  @media (max-width: $screen-md-max) {
+    font-size: 18px;
+  }
+  font-weight: bold;
+  letter-spacing: -.030em;
+  line-height: $line-height-h1;
+  margin-bottom: $baseline-grid * 4;
+  margin-top: $baseline-grid * 4;
+}
+
+h2, .h2 {
+  letter-spacing: -.030em;
+  line-height: $line-height-h2;
+  margin-bottom: $baseline-grid * 3;
+  margin-top: $baseline-grid * 4;
+}
+
+h3, .h3 {
+  letter-spacing: -.030em;
+  line-height: $line-height-h3;
+  margin-bottom: $baseline-grid * 3;
+  margin-top: $baseline-grid * 4;
+  @media (max-width: $screen-sm-max) {
+    font-size: 14px;
+    margin-bottom: $baseline-grid * 2;
+    margin-top: $baseline-grid * 3;
+  }
+}
+
+h4, .h4 {
+  letter-spacing: -.020em;
+  line-height: $line-height-h4;
+  margin-top: $baseline-grid * 3;
+  margin-bottom: $baseline-grid * 2;
+}
+
+h5, .h5 {
+  letter-spacing: -.010em;
+  line-height: $line-height-h5;
+  margin-top: $baseline-grid * 3;
+  margin-bottom: $baseline-grid * 2;
+}
+
+h6, .h6 {
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  margin-bottom: $baseline-grid;
+  line-height: $line-height-h6;
+  margin-top: $baseline-grid * 3;
+  margin-bottom: $baseline-grid * 2;
+  font-weight: $font-weight-regular;
+  color: $gray-base-50;
+}
+
+p {
+  letter-spacing: -.035em;
+  color: $gray-base-80;
+  margin-top: $baseline-grid;
+  margin-bottom: $baseline-grid * 3;
+
+  &.small {
+    color: $gray-base-60;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    margin-bottom: $baseline-grid * 1;
+  }
+}
+
+// Still needed in footer
+#footer p {
+  color: $gray-base-30;
+}
+
+// Still used in insights
+.text-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+// Still used in insights
+.text-base {
+  font-size: $font-size-base;
+}
+
+// Still used in mykununu
+.text-sm {
+  font-size: $font-size-sm;
+}
+
+// Still used in insights
+.text-xs {
+  font-size: $font-size-xs;
+}
+
+.text-left    { text-align: left; }
+
+// Still used in profiles
+.text-right   { text-align: right; }
+
+// Still used in homepage, mykununu sidebar
+.text-center  { text-align: center; }
+
+// Still used in the footer
+@media (max-width: $screen-xs-max) {
+  .text-center-xs { text-align: center; }
+}
+
+// Still used in the footer
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .text-center-sm { text-align: center; }
+}

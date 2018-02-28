@@ -1,0 +1,40 @@
+// Sticky footer
+// -------------
+
+html {
+ font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding-top: $navbar-height;
+
+  > header.navbar {
+    margin-bottom: 0;
+  }
+
+  > main {
+    min-height: 100%;
+    overflow: auto;
+  }
+
+  > footer {
+    margin-top: -$navbar-height;
+  }
+
+  &.no-fixed-navbar {
+    padding-top: 0;
+  }
+}
+
+a {
+  @include transition(.25s color);
+}
+
+iframe {
+  border: 0;
+}

@@ -1,0 +1,15 @@
+@mixin text-shadow {
+  text-shadow: 0 1px 1px rgba($black, .2);
+}
+
+@mixin text-shadow-darker {
+  text-shadow: 0 1px 1px rgba($black, .5);
+}
+
+@mixin text-shadow-darkest {
+  text-shadow: 0 0 3px rgba(0, 0, 0, .5), 0 0 5px rgba(0, 0, 0, .7);
+}
+
+@mixin btn-text-shadow {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+}

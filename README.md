@@ -1,6 +1,10 @@
-# kununu-theme
+# kununu themes
 
-kununu's basic styling
+kununu's basic styling. We have the original kununu-theme which is used in the monolith and then we have the @kununu/kununu-theme-v2 which is our newer theme used in current applications. Make sure to use the new theme-v2 when you are starting a new project.
+
+## kununu-theme (Deprecated - please use kununu-theme-v2 for new applications)
+
+kununu basic styling v1 - used for the monolith
 
 All the styles are scss and need to be compiled.
 
@@ -10,10 +14,10 @@ Quick iteration is key to a good developer experience on the frontend. With a pr
 
 For example, to quickly iterate on the kununu theme while using it in another project, your local theme repo can be linked to the other project.
 
-To link the `kununu-theme` git repository to `node_modules` of the other project:
+To link the `@kununu/kununu-theme-v2` or `kununu-theme` git repository to `node_modules` of the other project:
 
 * Go into the root of the *theme folder* and type ```npm link```
-* Go into the root folder of *the other project* and type ```npm link kununu-theme```
+* Go into the root folder of *the other project* and type ```npm link @kununu/kununu-theme-v2```
 
 To remove the links again:
 
@@ -25,14 +29,4 @@ To remove the links again:
 
 ## Dependencies
 
-The styles depend on Bootstap and can be bundled using webpack.
-
-## Publish a new version
-
-In order to update the npm version we must create and push a new tag. Pushing a new tag will cause Travis to automatically publish the new npm version ([docs](https://docs.travis-ci.com/user/deployment/npm)).
-
-```bash
-# Do the following on the master branch
-git tag -a vX.Y.Z -m "<what changed in this version>"
-git push --tags
-```
+You will need a SASS loader in order to use these styles. There are a lot of variables used for customizing Boostrap 3, Although most of the styles will work with Bootstrap 4 as well except for navbar-default.

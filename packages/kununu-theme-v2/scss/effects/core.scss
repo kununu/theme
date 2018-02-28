@@ -1,177 +1,93 @@
 // TODO: Get rid of as many of these atomic classes as possible. We are not Yahoo http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/
-%no-padding {
-  padding: 0;
-}
-
 .static { position: static; }
 .relative { position: relative; }
 .absolute { position: absolute; }
 
-.overflow-hide {
-  overflow: hidden;
-}
-
-.overflow-scroll {
-  overflow: scroll;
-}
-
-.no-wrap {
-  white-space: nowrap;
-}
-
-.padding {
-  padding: $grid-gutter-width;
-}
-
-.padding-half {
-  padding: $grid-gutter-width / 2;
-}
-
-.padding-quarter {
-  padding: $grid-gutter-width / 4;
-}
-
-.padding-top {
-  padding-top: $grid-gutter-width;
-}
-
+// Still used in insights
 .padding-bottom {
   padding-bottom: $grid-gutter-width;
 }
 
-.padding-bottom-double {
-  padding-bottom: $grid-gutter-width * 2;
-}
-
-.padding-bottom-quadruple {
-  padding-bottom: $grid-gutter-width * 4;
-}
-
+// Still used in insights
 .padding-top-half {
   padding-top: $grid-gutter-width / 2;
 }
 
-.padding-right-half {
-  padding-right: $grid-gutter-width / 2;
-}
-
+// Still used in insights
 .padding-bottom-half {
   padding-bottom: $grid-gutter-width / 2;
 }
 
+// Still used in insights
 .padding-top-third {
   padding-top: $grid-gutter-width / 3;
 }
 
-.padding-bottom-third {
-  padding-bottom: $grid-gutter-width / 3;
-}
-
-.padding-top-fourth {
-  padding-top: $grid-gutter-width / 4;
-}
-
-.padding-bottom-fourth {
-  padding-bottom: $grid-gutter-width / 4;
-}
-
+// Still used in insights
 .padding-right {
   padding-right: $grid-gutter-width;
 }
 
+// Still used in insights
 .padding-left {
   padding-left: $grid-gutter-width;
 }
 
+// Still used in insights, home
+.no-padding {
+  padding: 0;
+}
+
+// Still used in insights
+.no-padding-left {
+  padding-left: 0;
+}
+
+// Still used in insights
+.no-padding-right {
+  padding-right: 0;
+}
+
+// Still used in insights
 .padding-left-half {
   padding-left: $grid-gutter-width / 2;
 }
 
-.margin {
-  margin: $grid-gutter-width;
-}
-
-.margin-third {
-  margin: $grid-gutter-width / 3;
-}
-
+// Still used in insights
 .margin-top {
   margin-top: $grid-gutter-width;
 }
 
+// Still used in insights
 .margin-top-half {
   margin-top: $grid-gutter-width / 2;
 }
 
+// Still used in insights
 .margin-top-third {
   margin-top: $grid-gutter-width / 3;
 }
 
-.margin-left {
-  margin-left: $grid-gutter-width;
-}
-
-.margin-left-half {
-  margin-left: $grid-gutter-width / 2;
-}
-
-.margin-left-third {
-  margin-left: $grid-gutter-width / 3;
-}
-
-.margin-right {
-  margin-right: $grid-gutter-width;
-}
-
-.margin-right-half {
-  margin-right: $grid-gutter-width / 2;
-}
-
-.margin-right-third {
-  margin-right: $grid-gutter-width / 3;
-}
-.margin-right-quarter {
-  margin-right: $grid-gutter-width / 4;
-}
-
+// Still used in insights
 .margin-bottom {
   margin-bottom: $grid-gutter-width;
 }
 
-.margin-bottom-double {
-  margin-bottom: $grid-gutter-width * 2;
-}
-
+// Still used in insights
 .margin-bottom-half {
   margin-bottom: $grid-gutter-width / 2;
 }
 
-.margin-bottom-third {
-  margin-bottom: $grid-gutter-width / 3;
-}
-
-.margin-bottom-negative-double {
-  margin-bottom: -$grid-gutter-width * 2;
-}
-
+// Still used in insights and error pages
 .margin-vertical {
   @extend .margin-top;
   @extend .margin-bottom;
 }
 
+// Still used in insights
 .margin-vertical-half {
   @extend .margin-top-half;
   @extend .margin-bottom-half;
-}
-
-.margin-vertical-third {
-  @extend .margin-top-third;
-  @extend .margin-bottom-third;
-}
-
-.margin-horizontal-half {
-  @extend .margin-left-half;
-  @extend .margin-right-half;
 }
 
 .inline-block {
@@ -186,14 +102,7 @@
   display: table-cell;
 }
 
-.fakelink {
-  cursor: pointer;
-}
-
-.pointer-disabled {
-  pointer-events: none;
-}
-
+// Used in reviews
 .bullet-after:after {
   content: '\2022';
   padding: 0 8px;

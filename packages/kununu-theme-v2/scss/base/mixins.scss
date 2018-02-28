@@ -13,23 +13,3 @@
 @mixin btn-text-shadow {
   text-shadow: 0 1px 1px rgba(0, 0, 0, .15);
 }
-
-@mixin font-awesome-icon($icon) {
-  @include fa-icon;
-  content: $icon;
-}
-
-@mixin ku-icon {
-  display: inline-block;
-  font-family: "kununu";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
-  text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-}

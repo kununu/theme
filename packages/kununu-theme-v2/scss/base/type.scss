@@ -91,123 +91,35 @@ p {
   }
 }
 
-.us-layout p {
-  font-size: $font-size-h4;
-  line-height: 1.65;
-}
-
+// Still needed in footer
 #footer p {
   color: $gray-base-30;
 }
 
-#footer h3 {
-  color: $gray-base-10;
-}
-
-.text-bold {
-  font-weight: $font-weight-bold;
-}
-
+// Still used in insights
 .text-semibold {
   font-weight: $font-weight-semibold;
 }
 
-.text-regular {
-  font-weight: $font-weight-regular;
-}
-
-.text-light {
-  font-weight: $font-weight-light;
-}
-
-.text-italic {
-  font-style: italic;
-}
-
-.text-normalcase {
-  text-transform: none;
-}
-
-.text-underline {
-  text-decoration: underline;
-}
-
-.text-lg {
-  font-size: $font-size-lg;
-}
-
-.text-md {
-  font-size: $font-size-h3;
-}
-
+// Still used in insights
 .text-base {
   font-size: $font-size-base;
 }
 
-.text-body-copy {
-  margin: 0;
-  font-size: $font-size-base;
-  font-weight: $font-weight-regular;
-  line-height: $line-height-base;
-}
-
+// Still used in mykununu
 .text-sm {
   font-size: $font-size-sm;
 }
 
+// Still used in insights
 .text-xs {
   font-size: $font-size-xs;
 }
 
 .text-left    { text-align: left; }
+
+// Still used in profiles
 .text-right   { text-align: right; }
+
+// Still used in homepage, mykununu sidebar
 .text-center  { text-align: center; }
-
-.text-monospace {
-  font-family: $font-family-monospace;
-}
-
-.dl-horizontal dt {
-  width: ($component-offset-horizontal - 12);
-  color: $text-muted;
-  text-align: left;
-  text-transform: uppercase;
-  font-size: $font-size-sm;
-  font-weight: $font-weight-regular;
-  line-height: 19px;
-  padding-top: 1px;
-  margin: 0;
-}
-
-.dl-horizontal-bold dt {
-  color: $text-color;
-  font-weight: $font-weight-bold;
-}
-
-.dl-horizontal-md dt {
-  width: 130px;
-}
-
-.dl-horizontal-long dt {
-  width: 195px;
-}
-
-.dl-horizontal-normalcase dt {
-  text-transform: none;
-}
-
-h1, .h1, .text-jumbo {
-}
-
-@media (max-width: $screen-xs-max) {
-  .text-center-xs { text-align: center; }
-}
-
-@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-  .text-center-sm { text-align: center; }
-}
-
-@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-  .text-center-md { text-align: center; }
-  .text-right-md { text-align: right !important; }
-}

@@ -3,6 +3,10 @@
 .relative { position: relative; }
 .absolute { position: absolute; }
 
+.padding-top {
+  padding-top: $grid-gutter-width;
+}
+
 // Still used in insights
 .padding-bottom {
   padding-bottom: $grid-gutter-width;

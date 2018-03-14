@@ -45,6 +45,13 @@ $red-dark:            #c2040d;
 // Brand colors
 // -------------------------
 
+$theme-colors: (
+  primary: $green,
+  secondary: $blue,
+  success: $green,
+  danger: $red,
+);
+
 $brand-primary:         $green;
 $brand-primary-dark:    $green-dark;
 $brand-success:         $green;
@@ -126,6 +133,9 @@ $headings-font-weight:       $font-weight-semibold;
 $padding-base-vertical:          10px;
 $padding-base-horizontal:        12px;
 
+$btn-padding-y: 10px;
+$btn-padding-x: 12px;
+
 $padding-large-vertical:         18px;
 $padding-xs-vertical:            2px;
 $padding-xs-horizontal:          6px;
@@ -162,6 +172,7 @@ $btn-default-bg:                 $gray-base-10;
 $btn-default-color:              $teal-dark;
 $btn-default-border:             transparent;
 
+$primary: $brand-primary;
 $btn-primary-color:              $white;
 $btn-primary-bg:                 $brand-primary;
 $btn-primary-hover:              $green-light;
@@ -255,11 +266,12 @@ $text-muted-dark:                $gray-base-60;
 
 // Panels (Bootstrap v4 = cards)
 // -------------------------
-
 $panel-bg:                    #fff;
 $panel-border:                lighten($gray-light, 7%);
 $panel-footer-bg:             #f5f5f5;
 $panel-inner-border:          $panel-border;
 $panel-padding:               $grid-gutter-width / 2;
 
-
+// Pagination
+// -------------------------
+$pagination-border:                    #ddd;

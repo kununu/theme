@@ -15,6 +15,7 @@
 }
 
 @mixin button-variant(
+  $color,
   $background,
   $border,
   $hoverBackground : lighten($background, 5%),
@@ -23,7 +24,7 @@
   $activeBorder    : darken($background, 5%)
 ) {
   @include transition(background-color .15s);
-  color: $white;
+  color: $color;
   background-color: $background;
   border-color: $border;
   text-transform: uppercase;
@@ -32,7 +33,7 @@
   &:focus,
   &.focus,
   .open > &.dropdown-toggle {
-    color: $white;
+    color: $color;
     background-color: $hoverBackground;
     border-color: $hoverBorder;
   }
@@ -40,7 +41,7 @@
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-    color: $white;
+    color: $color;
     background-image: none;
     background-color: $activeBackground;
     border-color: $activeBorder;

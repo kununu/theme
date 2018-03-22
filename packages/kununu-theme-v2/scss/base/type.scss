@@ -26,22 +26,22 @@ h1, .h1 {
   @media (max-width: $screen-md-max) {
     font-size: 18px;
   }
-  font-weight: bold;
-  letter-spacing: -.030em;
+  font-weight: 200;
+  letter-spacing: 0;
   line-height: $line-height-h1;
   margin-bottom: $baseline-grid * 4;
   margin-top: $baseline-grid * 4;
 }
 
 h2, .h2 {
-  letter-spacing: -.030em;
+  letter-spacing: 0;
   line-height: $line-height-h2;
   margin-bottom: $baseline-grid * 3;
   margin-top: $baseline-grid * 4;
 }
 
 h3, .h3 {
-  letter-spacing: -.030em;
+  letter-spacing: 0;
   line-height: $line-height-h3;
   margin-bottom: $baseline-grid * 3;
   margin-top: $baseline-grid * 4;

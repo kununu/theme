@@ -11,6 +11,10 @@ body {
 }
 
 body {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: auto;
+  font-weight: 400;
   padding-top: $navbar-height;
 
   > header.navbar {
@@ -44,3 +48,47 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+strong {
+  font-weight: 600;
+}
+
+// TODO: Remove once nukleus is updated
+// In order to update the apps one at a time
+// we will add the nukleus/client-gear style overwrites
+// here. Then once each app is using the newest theme
+// we can painlessly update nukleus and client-gear.
+p,
+[class*="formControl"] {
+  letter-spacing: 0;
+}
+
+header[role="banner"] [class*="title"] {
+  font-weight: 200;
+}
+
+[class*="button"],
+.btn-primary,
+[class*="container"][class*="visible"][class*="error"] p,
+[class*="controlLabel"],
+[class*="labelContainer"] label,
+[class*="radioButton"] label,
+[class*="blockTabs"] [class*="tabLink"],
+header[role="banner"] [class*="headerNav"],
+[class*="bottomMenu"] [class*="selection"] {
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+/* Retina-specific styles */
+@media
+(-webkit-max-device-pixel-ratio: 1.49),
+(max-resolution: 143dpi) {
+  [class*="button"],
+  .btn-primary,
+  header[role="banner"] [class*="headerNav"],
+  [class*="bottomMenu"] [class*="selection"] {
+    font-weight: 400;
+  }
+}
+

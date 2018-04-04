@@ -19,6 +19,7 @@ h6, .h6 {
     font-size: 75%;
     padding-left: 4px;
     padding-right: 4px;
+    letter-spacing: 0;
   }
 }
 
@@ -26,22 +27,18 @@ h1, .h1 {
   @media (max-width: $screen-md-max) {
     font-size: 18px;
   }
-  font-weight: bold;
-  letter-spacing: -.030em;
   line-height: $line-height-h1;
   margin-bottom: $baseline-grid * 4;
   margin-top: $baseline-grid * 4;
 }
 
 h2, .h2 {
-  letter-spacing: -.030em;
   line-height: $line-height-h2;
   margin-bottom: $baseline-grid * 3;
   margin-top: $baseline-grid * 4;
 }
 
 h3, .h3 {
-  letter-spacing: -.030em;
   line-height: $line-height-h3;
   margin-bottom: $baseline-grid * 3;
   margin-top: $baseline-grid * 4;
@@ -53,14 +50,12 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  letter-spacing: -.020em;
   line-height: $line-height-h4;
   margin-top: $baseline-grid * 3;
   margin-bottom: $baseline-grid * 2;
 }
 
 h5, .h5 {
-  letter-spacing: -.010em;
   line-height: $line-height-h5;
   margin-top: $baseline-grid * 3;
   margin-bottom: $baseline-grid * 2;
@@ -68,7 +63,6 @@ h5, .h5 {
 
 h6, .h6 {
   text-transform: uppercase;
-  letter-spacing: .02em;
   margin-bottom: $baseline-grid;
   line-height: $line-height-h6;
   margin-top: $baseline-grid * 3;
@@ -78,7 +72,6 @@ h6, .h6 {
 }
 
 p {
-  letter-spacing: -.035em;
   color: $gray-base-80;
   margin-top: $baseline-grid;
   margin-bottom: $baseline-grid * 3;

@@ -11,6 +11,10 @@ body {
 }
 
 body {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: auto;
+  font-weight: 400;
   padding-top: $navbar-height;
 
   > header.navbar {
@@ -43,4 +47,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+strong {
+  font-weight: 600;
 }

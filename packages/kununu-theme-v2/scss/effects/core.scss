@@ -7,76 +7,15 @@
   padding-top: $grid-gutter-width;
 }
 
-.padding-bottom {
-  padding-bottom: $grid-gutter-width;
-}
-
-.padding-top-half {
-  padding-top: $grid-gutter-width / 2;
-}
-
-.padding-bottom-half {
-  padding-bottom: $grid-gutter-width / 2;
-}
-
-.padding-top-third {
-  padding-top: $grid-gutter-width / 3;
-}
-
-.padding-right {
-  padding-right: $grid-gutter-width;
-}
-
-.padding-left {
-  padding-left: $grid-gutter-width;
-}
-
 // Still used in footer
 .no-padding {
   padding: 0;
-}
-
-.no-padding-left {
-  padding-left: 0;
-}
-
-.no-padding-right {
-  padding-right: 0;
-}
-
-.padding-left-half {
-  padding-left: $grid-gutter-width / 2;
-}
-
-.margin-top {
-  margin-top: $grid-gutter-width;
-}
-
-.margin-top-half {
-  margin-top: $grid-gutter-width / 2;
-}
-
-.margin-top-third {
-  margin-top: $grid-gutter-width / 3;
-}
-
-.margin-bottom {
-  margin-bottom: $grid-gutter-width;
-}
-
-.margin-bottom-half {
-  margin-bottom: $grid-gutter-width / 2;
 }
 
 // Still used in error pages
 .margin-vertical {
   @extend .margin-top;
   @extend .margin-bottom;
-}
-
-.margin-vertical-half {
-  @extend .margin-top-half;
-  @extend .margin-bottom-half;
 }
 
 .inline-block {

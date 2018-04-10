@@ -89,33 +89,10 @@ p {
   color: $gray-base-30;
 }
 
-// Still used in insights
-.text-semibold {
-  font-weight: $font-weight-semibold;
-}
-
-// Still used in insights
-.text-base {
-  font-size: $font-size-base;
-}
-
-// Still used in mykununu
-.text-sm {
-  font-size: $font-size-sm;
-}
-
-// Still used in insights
-.text-xs {
-  font-size: $font-size-xs;
-}
-
 .text-left    { text-align: left; }
 
 // Still used in profiles
 .text-right   { text-align: right; }
-
-// Still used in homepage, mykununu sidebar
-.text-center  { text-align: center; }
 
 // Still used in the footer
 @media (max-width: $screen-xs-max) {

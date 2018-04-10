@@ -89,10 +89,18 @@ p {
   color: $gray-base-30;
 }
 
+// Still used in mykununu
+.text-sm {
+  font-size: $font-size-sm;
+}
+
 .text-left    { text-align: left; }
 
 // Still used in profiles
 .text-right   { text-align: right; }
+
+// Still used in mykununu sidebar
+.text-center  { text-align: center; }
 
 // Still used in the footer
 @media (max-width: $screen-xs-max) {

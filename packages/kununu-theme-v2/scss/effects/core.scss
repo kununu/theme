@@ -14,8 +14,8 @@
 
 // Still used in error pages
 .margin-vertical {
-  @extend .margin-top;
-  @extend .margin-bottom;
+  margin-top: $grid-gutter-width;
+  margin-bottom: $grid-gutter-width;
 }
 
 .inline-block {

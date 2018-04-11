@@ -94,6 +94,11 @@ p {
   font-size: $font-size-sm;
 }
 
+// Still used in mykununu and profiles specs
+.text-xs {
+  font-size: $font-size-xs;
+}
+
 .text-left    { text-align: left; }
 
 // Still used in profiles

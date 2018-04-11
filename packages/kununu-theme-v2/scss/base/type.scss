@@ -94,7 +94,7 @@ p {
   font-size: $font-size-sm;
 }
 
-// Still used in mykununu and profiles specs
+// Still used in footer
 .text-xs {
   font-size: $font-size-xs;
 }
@@ -103,9 +103,6 @@ p {
 
 // Still used in profiles
 .text-right   { text-align: right; }
-
-// Still used in mykununu sidebar
-.text-center  { text-align: center; }
 
 // Still used in the footer
 @media (max-width: $screen-xs-max) {

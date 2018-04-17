@@ -7,91 +7,15 @@
   padding-top: $grid-gutter-width;
 }
 
-// Still used in insights
-.padding-bottom {
-  padding-bottom: $grid-gutter-width;
-}
-
-// Still used in insights
-.padding-top-half {
-  padding-top: $grid-gutter-width / 2;
-}
-
-// Still used in insights
-.padding-bottom-half {
-  padding-bottom: $grid-gutter-width / 2;
-}
-
-// Still used in insights
-.padding-top-third {
-  padding-top: $grid-gutter-width / 3;
-}
-
-// Still used in insights
-.padding-right {
-  padding-right: $grid-gutter-width;
-}
-
-// Still used in insights
-.padding-left {
-  padding-left: $grid-gutter-width;
-}
-
-// Still used in insights, home, footer
+// Still used in footer
 .no-padding {
   padding: 0;
 }
 
-// Still used in insights
-.no-padding-left {
-  padding-left: 0;
-}
-
-// Still used in insights
-.no-padding-right {
-  padding-right: 0;
-}
-
-// Still used in insights
-.padding-left-half {
-  padding-left: $grid-gutter-width / 2;
-}
-
-// Still used in insights
-.margin-top {
-  margin-top: $grid-gutter-width;
-}
-
-// Still used in insights
-.margin-top-half {
-  margin-top: $grid-gutter-width / 2;
-}
-
-// Still used in insights
-.margin-top-third {
-  margin-top: $grid-gutter-width / 3;
-}
-
-// Still used in insights
-.margin-bottom {
-  margin-bottom: $grid-gutter-width;
-}
-
-// Still used in insights
-.margin-bottom-half {
-  margin-bottom: $grid-gutter-width / 2;
-}
-
-// Still used in insights and error pages
+// Still used in error pages
 .margin-vertical {
-  @extend .margin-top;
-  @extend .margin-bottom;
-}
-
-// Still used in insights
-.margin-vertical-half {
-  @extend .margin-top-half;
-  @extend .margin-bottom-half;
+  margin-top: $grid-gutter-width;
+  margin-bottom: $grid-gutter-width;
 }
 
 .inline-block {

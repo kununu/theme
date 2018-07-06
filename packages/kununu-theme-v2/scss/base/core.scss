@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 // Sticky footer
 // -------------
 
@@ -15,6 +19,11 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: auto;
   font-weight: 400;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $body-bg;
   padding-top: $navbar-height;
 
   > header.navbar {
@@ -37,6 +46,25 @@ body {
 
 a {
   @include transition(.25s color);
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: ($line-height-computed / 2);
+
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
 }
 
 iframe {

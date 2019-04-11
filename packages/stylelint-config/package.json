@@ -1,0 +1,38 @@
+{
+  "name": "@kununu/stylelint-config",
+  "version": "1.0.0",
+  "description": "kununu's stylelint config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kununu/theme.git"
+  },
+  "keywords": [
+    "stylelint",
+    "stylelintconfig",
+    "config",
+    "kununu",
+    "css",
+    "scss",
+    "sass"
+  ],
+  "author": "kununu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kununu/theme/issues"
+  },
+  "homepage": "https://github.com/kununu/theme#readme",
+  "dependencies": {
+    "stylelint": "9.10.1",
+    "stylelint-config-rational-order": "0.0.4",
+    "stylelint-config-standard": "18.2.0",
+    "stylelint-order": "2.2.0",
+    "stylelint-scss": "3.5.4"
+  },
+  "peerDependencies": {
+    "stylelint": ">=9.0.0"
+  }
+}

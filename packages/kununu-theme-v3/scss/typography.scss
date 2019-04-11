@@ -1,0 +1,79 @@
+body {
+  font-weight: normal;
+  font-family: sans-serif;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+@mixin font-props($color: null, $font-size: null, $letter-spacing: null, $line-height: null, $font-weight: null, $text-align: null) {
+  margin: 0;
+
+  @if ($color) {
+    color: $color;
+  }
+
+  @if ($font-size) {
+    font-size: $font-size;
+  }
+
+  @if ($letter-spacing) {
+    letter-spacing: $letter-spacing;
+  }
+
+  @if ($line-height) {
+    line-height: $line-height;
+  }
+
+  @if ($font-weight) {
+    font-weight: $font-weight;
+  }
+
+  @if ($text-align) {
+    text-align: $text-align;
+  }
+}
+
+h1 {
+  @include font-props($dark, 24px, -.27px, null, bold, center);
+}
+
+h2 {
+  @include font-props($charcoal-grey, 21px, -.3px, null, bold);
+
+  & .center {
+    @include font-props(null, 22px, -.31px, 28px, null, center);
+  }
+}
+
+h3 {
+  @include font-props($charcoal-grey, 18px, -.21px, null, bold);
+}
+
+h4 {
+  @include font-props($dark, 18px, null, null, 600);
+}
+
+h5 {
+  @include font-props($charcoal-grey, 16px, -.18px, null, 600);
+}
+
+h6 {
+  @include font-props($light-grey-blue, 14px, -.16px, 1.33, bold);
+
+  margin-bottom: 5px;
+  text-transform: uppercase;
+
+  & .center {
+    @include font-props(null, null, null, null, null, center);
+  }
+}
+
+p {
+  @include font-props($charcoal-grey,  18px, null, 24px);
+}
+
+a {
+  color: $deep-sky-blue;
+}

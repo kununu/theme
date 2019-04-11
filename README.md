@@ -1,12 +1,12 @@
 # kununu theme
 
-kununu's basic styling. It contains everything from reset, colors, gradients, typography and media breakpoints that is used on kununu applications.
+kununu's basic styling. It contains everything from reset, colors, gradients, typography and media breakpoints that are used on kununu applications.
 
 🚨 Make sure to use the new `@kununu-theme-v3` when you starting a new project.
 
 ## ✅ kununu-theme-v3 [current]
 
-kununu basic styling v3 - built from scratch for new applications with kununu's new UI
+Built from scratch for new applications with kununu's new UI
 
 All the styles are SCSS and need to be compiled.
 

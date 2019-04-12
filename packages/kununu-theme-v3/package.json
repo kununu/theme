@@ -17,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/kununu/theme/issues"
   },
-  "homepage": "https://github.com/kununu/theme#readme"
+  "homepage": "https://github.com/kununu/theme#readme",
+  "scripts": {
+    "lint": "stylelint 'scss/**/*.scss'"
+  },
+  "devDependencies": {
+    "@kununu/stylelint-config": "1.0.0",
+    "stylelint": "9.10.1",
+    "stylelint-config-rational-order": "0.0.4",
+    "stylelint-config-standard": "18.2.0",
+    "stylelint-order": "2.2.0",
+    "stylelint-scss": "3.5.4"
+  }
 }

@@ -1,43 +1,37 @@
-# kununu theme
+# @kununu/kununu-theme-v3
+
+> kununu UI on a SCSS theme
 
 kununu's basic styling. It contains everything from reset, colors, gradients, typography and media breakpoints that are used on kununu applications.
 
-🚨 Make sure to use the new `@kununu-theme-v3` when you starting a new project.
+## 📦 Installation
 
-## ✅ kununu-theme-v3 [current]
+Install and save as a dependency on your project:
+```console
+npm install --save @kununu/kununu-theme-v3
+```
 
-Built from scratch for new applications with kununu's new UI
+## 💻 Usage
 
-All the styles are SCSS and need to be compiled.
+Import files in your SCSS to begin using right away:
 
-## ⛔️ kununu-theme, kununu-theme-v2 [deprecated]
+```scss
+@import "~@kununu/kununu-theme-v3/scss/base";
+@import "~@kununu/kununu-theme-v3/scss/variables";
+@import "~@kununu/kununu-theme-v3/scss/typography";
+```
 
-kununu basic styling v1 - used in the monolith and its original UI
-kununu basic styling v2 - used in new applications matching monolith's UI
+Remember that all the styles are SCSS and need to be compiled. Check [sass-loader](https://github.com/webpack-contrib/sass-loader) documentation if you're using Webpack to bundle your assets.
 
-All the styles are SCSS and need to be compiled.
+#### stylelint
+Check out [@kununu/stylelint-config](https://www.npmjs.com/package/@kununu/stylelint-config) package with stylelint rules we use at kununu.
 
-## Development
+## 🧹 Deprecated versions
 
-Quick iteration is key to a good developer experience on the frontend. With a project that consumes other npm packages, iterating on those packages locally without publishing can be accomplished using npm's `link` command.
+**[kununu-theme](https://www.npmjs.com/package/kununu-theme)**
+Used in the monolith and its original UI
 
-For example, to quickly iterate on the kununu theme while using it in another project, your local theme repo can be linked to the other project.
+**[kununu-theme-v2](https://www.npmjs.com/package/@kununu/kununu-theme-v2)**
+Used in new applications matching monolith's UI
 
-To link the `@kununu/kununu-theme-v3`, `@kununu/kununu-theme-v2` or `kununu-theme` git repository to `node_modules` of the other project:
-
-* Go into the root of the *theme folder* and type ```npm link```
-* Go into the root folder of *the other project* and type ```npm link @kununu/kununu-theme-v3```
-
-To remove the links again:
-
-* Go into the root of the *theme folder* and type ```npm unlink```
-* Go into the root folder of *the other project* and type ```npm unlink @kununu/kununu-theme-v3```
-* Eventually redo ```npm install```
-
-[npm documentation - link](https://docs.npmjs.com/cli/link)
-
-## Dependencies
-
-You will need a Sass loader in order to use these styles. All Bootstrap references were removed from kununu-theme-v3, as it was built from scratch.
-
-#### Made with ❤️  by our awesome engineering folks in Vienna and Porto
+####  Made with ❤️  by our awesome engineering folks in Vienna and Porto

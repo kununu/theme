@@ -1,6 +1,6 @@
 # @kununu/stylelint-config
 
-> kununu shareable config for stylelint
+> kununu config for stylelint
 
 This package contains stylelint rules for consistent CSS (or SCSS) code across kununu's projects.
 

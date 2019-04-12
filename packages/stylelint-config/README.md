@@ -32,7 +32,7 @@ See [docs](https://stylelint.io/user-guide/configuration) to find more detailed 
 
 ## ⚡️ Plugins
 
-At kununu, [@kununu/eslint-config]([https://www.npmjs.com/package/@kununu/eslint-config](https://www.npmjs.com/package/@kununu/eslint-config)) and [@kununu/stylelint-config]([https://www.npmjs.com/package/@kununu/stylelint-config](https://www.npmjs.com/package/@kununu/stylelint-config)) linters runs on every commit, but finding a lint error after push can be frustrating and waste time. In order to avoid it, editor plugins are available to warn you and validate as you code.
+At kununu, [@kununu/eslint-config](https://www.npmjs.com/package/@kununu/eslint-config) and [@kununu/stylelint-config](https://www.npmjs.com/package/@kununu/stylelint-config) linters runs on every commit, but finding a lint error after push can be frustrating and waste time. In order to avoid it, editor plugins are available to warn you and validate as you code.
 
 There's what we use and recommend:
 

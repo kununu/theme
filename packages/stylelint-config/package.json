@@ -25,14 +25,11 @@
     "url": "https://github.com/kununu/theme/issues"
   },
   "homepage": "https://github.com/kununu/theme#readme",
-  "dependencies": {
+  "peerDependencies": {
     "stylelint": "9.10.1",
     "stylelint-config-rational-order": "0.0.4",
     "stylelint-config-standard": "18.2.0",
     "stylelint-order": "2.2.0",
     "stylelint-scss": "3.5.4"
-  },
-  "peerDependencies": {
-    "stylelint": ">=9.0.0"
   }
 }

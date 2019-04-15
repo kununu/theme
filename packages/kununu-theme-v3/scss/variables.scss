@@ -1,7 +1,6 @@
 /*
  * Colors
  */
-
 $black: #000000;
 $butterscotch: #ffbc47;
 $charcoal-grey: #2f3940;
@@ -20,10 +19,15 @@ $white-grey: #f8f8f8;
  * Gradients
  */
 $green-gradient: linear-gradient(98deg, #b4de37, $gross-green);
+$active-underline-gradient: linear-gradient(92deg, #269dff, #0e6bfd);
 
 /*
  * Sizes
  */
-
-$desktop-media: 1025px;
 $tablet-media: 415px;
+$desktop-media: 1025px;
+
+/*
+ * Spacing
+ */
+$horizontal-spacing: 20px;

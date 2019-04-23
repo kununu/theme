@@ -5,6 +5,8 @@ $black: #000000;
 $butterscotch: #ffbc47;
 $charcoal-grey: #2f3940;
 $dark: #18242b;
+$light-blue: #269dff;
+$deep-blue: #0e6bfd;
 $deep-sky-blue: #1477fd;
 $gross-green: #99c613;
 $ice: #e7e9e9;
@@ -19,7 +21,8 @@ $white-grey: #f8f8f8;
  * Gradients
  */
 $green-gradient: linear-gradient(98deg, #b4de37, $gross-green);
-$active-underline-gradient: linear-gradient(92deg, #269dff, #0e6bfd);
+$active-underline-gradient: linear-gradient(92deg, $light-blue, $deep-blue);
+$side-menu-close-gradient: linear-gradient(135deg, $light-blue, $deep-blue);
 
 /*
  * Sizes

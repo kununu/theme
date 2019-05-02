@@ -27,7 +27,7 @@ $side-menu-close-gradient: linear-gradient(135deg, $light-blue, $deep-blue);
 /*
  * Sizes
  */
-$mobile-s-media: calc($mobile-m-media - 1px);
+$mobile-s-media: calc(360px - 1px);
 $mobile-m-media: 360px;
 $mobile-l-media: 375px;
 $mobile-xl-media: 412px;

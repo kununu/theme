@@ -25,3 +25,13 @@ main {
 *:after {
   box-sizing: inherit;
 }
+
+/* Correct the odd appearance in Safari */
+[type="search"] { // stylelint-disable-line string-quotes
+  outline-offset: -2px;
+  -webkit-appearance: textfield; // stylelint-disable-line property-no-vendor-prefix
+
+  &::-webkit-search-decoration { // stylelint-disable-line string-quotes, selector-no-vendor-prefix
+    -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+  }
+}

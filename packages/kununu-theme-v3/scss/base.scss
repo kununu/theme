@@ -27,7 +27,7 @@ main {
 }
 
 /* Correct the odd appearance in Safari */
-[type="search"] { // stylelint-disable-line string-quotes
+input[type="search"] { // stylelint-disable-line string-quotes
   outline-offset: -2px;
   -webkit-appearance: textfield; // stylelint-disable-line property-no-vendor-prefix
 

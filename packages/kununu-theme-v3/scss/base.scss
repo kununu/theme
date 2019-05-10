@@ -40,6 +40,10 @@ button,
   cursor: pointer;
   -webkit-appearance: button; // stylelint-disable-line property-no-vendor-prefix
 
+  &:focus {
+    outline: 0;
+  }
+
   /* Remove the inner border and padding in Firefox */
   &::-moz-focus-inner {
     padding: 0;

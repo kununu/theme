@@ -25,3 +25,43 @@ main {
 *:after {
   box-sizing: inherit;
 }
+
+/* Remove the margin in Firefox and Safari */
+button,
+input {
+  margin: 0;
+}
+
+/* Correct the inability to style clickable types in iOS and Safari */
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  cursor: pointer;
+  -webkit-appearance: button; // stylelint-disable-line property-no-vendor-prefix
+
+  &:focus {
+    outline: 0;
+  }
+
+  /* Remove the inner border and padding in Firefox */
+  &::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+  }
+
+  /* Restore the focus styles unset by the previous rule */
+  &:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+}
+
+/* Correct the odd appearance in Safari */
+input[type="search"] { // stylelint-disable-line string-quotes
+  outline-offset: -2px;
+  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+
+  &::-webkit-search-decoration { // stylelint-disable-line string-quotes, selector-no-vendor-prefix
+    -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+  }
+}

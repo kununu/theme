@@ -40,10 +40,6 @@ button,
   cursor: pointer;
   -webkit-appearance: button; // stylelint-disable-line property-no-vendor-prefix
 
-  &:focus {
-    outline: 0;
-  }
-
   /* Remove the inner border and padding in Firefox */
   &::-moz-focus-inner {
     padding: 0;
@@ -53,6 +49,11 @@ button,
   /* Restore the focus styles unset by the previous rule */
   &:-moz-focusring {
     outline: 1px dotted ButtonText;
+  }
+
+  /* Remove outline around element when focusing */
+  &:focus {
+    outline: 0;
   }
 }
 

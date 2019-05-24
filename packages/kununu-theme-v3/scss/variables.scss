@@ -8,6 +8,7 @@ $dark: #18242b;
 $deep-blue: #0e6bfd;
 $deep-sky-blue: #1477fd;
 $light-blue: #269dff;
+$green: #b4de37;
 $gross-green: #99c613;
 $ice: #e7e9e9;
 $light-blue-grey: #d1d3d5;
@@ -20,14 +21,12 @@ $white-grey: #f8f8f8;
 /*
  * Gradients
  */
-$active-underline-gradient: linear-gradient(92deg, $light-blue, $deep-blue);
-$green-gradient: linear-gradient(98deg, #b4de37, $gross-green);
-$side-menu-close-gradient: linear-gradient(135deg, $light-blue, $deep-blue);
+$blue-gradient: linear-gradient(135deg, $light-blue, $deep-blue);
+$green-gradient: linear-gradient(98deg, $green, $gross-green);
 
 /*
  * Sizes
  */
-$mobile-s-media: 359px;
 $mobile-m-media: 360px;
 $mobile-l-media: 375px;
 $mobile-xl-media: 412px;

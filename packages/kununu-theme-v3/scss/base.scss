@@ -70,6 +70,7 @@ input[type="search"] { // stylelint-disable-line string-quotes
 progress {
   width: 108px;
   height: 4px;
+  position: relative;
   border: none; // Get rid of default border in Firefox.
   border-radius: 99px;
   appearance: none;
@@ -81,18 +82,23 @@ progress {
   }
 
   &::-webkit-progress-value {
+    position: absolute;
+    top: -1px;
+    height: 6px;
     background: $blue-gradient;
     border-radius: 99px;
   }
 
   &::-moz-progress-bar {
+    margin-top: -1px;
+    height: 6px;
     background: $blue-gradient;
     border-radius: 99px;
   }
 
   &[value='0'] {
     background-color: $ice;
-  
+
     &::-webkit-progress-bar {
       background-color: $ice;
     }

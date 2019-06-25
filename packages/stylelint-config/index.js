@@ -29,7 +29,7 @@ module.exports = {
     "no-duplicate-selectors": true,
     "number-leading-zero": "never",
     "property-no-vendor-prefix": true,
-    "rule-empty-line-before": ["always", {"except": ["after-single-line-comment"]}],
+    "rule-empty-line-before": ["always", {"except": ["after-single-line-comment", "first-nested"]}],
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-operator-space-before": "never",
@@ -37,6 +37,9 @@ module.exports = {
     "selector-combinator-space-after": "always",
     "selector-max-id": [0, {"severity": "warning"}],
     "selector-no-vendor-prefix": true,
+    "selector-pseudo-class-no-unknown": [true, {
+      "ignorePseudoClasses": ["global", "export", "import", "local"]
+    }],
     "selector-pseudo-class-parentheses-space-inside": "never",
     "selector-pseudo-element-colon-notation": "single",
     "string-quotes": "single",

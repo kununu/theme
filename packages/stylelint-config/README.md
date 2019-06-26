@@ -6,16 +6,9 @@ This package contains stylelint rules for consistent CSS (or SCSS) code across k
 
 ## 📦 Installation
 
-If using npm 5+, use this shortcut:
-
+Add @kununu/stylelint-config npm package as dev dependency to your project:
 ```console
-npx install-peerdeps --dev @kununu/stylelint-config
-```
-
-Alternatively you can install the peer dependencies manually like this:
-
-```console
-npm install --save-dev @kununu/stylelint-config stylelint@9.10.1 stylelint-config-rational-order@0.0.4 stylelint-config-standard@18.2.0 stylelint-order@2.2.0 stylelint-scss@3.5.4
+npx install --save-dev @kununu/stylelint-config
 ```
 
 ## 💻 Usage

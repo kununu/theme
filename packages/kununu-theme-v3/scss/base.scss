@@ -3,8 +3,8 @@
 /* Remove the margin in all browsers */
 body {
   margin: 0;
-  background-color: $ice;
   overflow-x: hidden;
+  background-color: $ice;
 }
 
 /* 1. Correct the line height in all browsers. */
@@ -69,13 +69,13 @@ input[type="search"] { // stylelint-disable-line string-quotes
 }
 
 progress {
+  position: relative;
   width: 108px;
   height: 4px;
-  position: relative;
+  background-color: #f3f4f4;
   border: none; // Get rid of default border in Firefox.
   border-radius: 99px;
   appearance: none;
-  background-color: #f3f4f4;
 
   &::-webkit-progress-bar {
     background-color: #f3f4f4;
@@ -91,8 +91,8 @@ progress {
   }
 
   &::-moz-progress-bar {
-    margin-top: -1px;
     height: 6px;
+    margin-top: -1px;
     background: $blue-gradient;
     border-radius: 99px;
   }

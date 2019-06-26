@@ -38,6 +38,8 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
+  font-size: 100%;
+  font-family: inherit;
   cursor: pointer;
   -webkit-appearance: button; // stylelint-disable-line property-no-vendor-prefix
 

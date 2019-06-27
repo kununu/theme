@@ -37,11 +37,11 @@ body {
   }
 }
 
-h1 {
+.h1 {
   @include font-props($dark, 22px, -.27px, null, bold, center);
 }
 
-h2 {
+.h2 {
   @include font-props($charcoal-grey, 21px, -.3px, null, bold);
 
   & .center {
@@ -49,19 +49,19 @@ h2 {
   }
 }
 
-h3 {
+.h3 {
   @include font-props($charcoal-grey, 18px, -.21px, null, bold);
 }
 
-h4 {
+.h4 {
   @include font-props($dark, 18px, null, null, 600);
 }
 
-h5 {
+.h5 {
   @include font-props($charcoal-grey, 16px, -.18px, null, 600);
 }
 
-h6 {
+.h6 {
   @include font-props($light-grey-blue, 14px, -.16px, 1.33, bold);
 
   margin-bottom: 5px;

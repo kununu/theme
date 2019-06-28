@@ -74,7 +74,7 @@ progress {
   width: 108px;
   height: 4px;
   background-color: #f3f4f4;
-  border: none; // Get rid of default border in Firefox.
+  border: none; // Get rid of default border in Firefox
   border-radius: 99px;
   appearance: none;
 
@@ -96,6 +96,10 @@ progress {
     margin-top: -1px;
     background: $blue-gradient;
     border-radius: 99px;
+  }
+
+  &::-ms-fill {
+    border: none; // Get rid of default border in IE 11
   }
 
   &[value='0'] {

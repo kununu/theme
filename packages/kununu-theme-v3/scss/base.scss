@@ -87,25 +87,30 @@ progress {
     position: absolute;
     top: -1px;
     height: 6px;
-    background: $blue-gradient;
+    background-color: $blue-gradient;
     border-radius: 99px;
   }
 
   &::-moz-progress-bar {
     height: 6px;
     margin-top: -1px;
-    background: $blue-gradient;
+    background-color: $blue-gradient;
     border-radius: 99px;
   }
 
   &::-ms-fill {
     border: none; // Get rid of default border in IE 11
+    background-color: $blue-gradient;
   }
-
-  &[value='0'] {
-    background-color: $ice;
+  
+  &:not([value]) {
+    animation-name: none; // remove ie animation
+    background: $ice;
 
     &::-webkit-progress-bar {
+      background-color: $ice;
+    }
+    &::-moz-progress-bar {
       background-color: $ice;
     }
   }

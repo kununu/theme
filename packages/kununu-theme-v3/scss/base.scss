@@ -99,17 +99,18 @@ progress {
   }
 
   &::-ms-fill {
-    border: none; // Get rid of default border in IE 11
     background-color: $blue-gradient;
+    border: none; // Get rid of default border in IE 11
   }
-  
+
   &:not([value]) {
-    animation-name: none; // remove ie animation
     background: $ice;
+    animation-name: none; // remove ie animation
 
     &::-webkit-progress-bar {
       background-color: $ice;
     }
+
     &::-moz-progress-bar {
       background-color: $ice;
     }

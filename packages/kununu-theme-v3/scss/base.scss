@@ -105,7 +105,10 @@ progress {
 
   &:not([value]) {
     background: $ice;
-    animation-name: none; // remove ie animation
+
+    &::-ms-fill {
+      animation-name: none; // remove ie animation
+    }
 
     &::-webkit-progress-bar {
       background: $ice;

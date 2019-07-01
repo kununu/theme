@@ -73,13 +73,13 @@ progress {
   position: relative;
   width: 108px;
   height: 4px;
-  background-color: #f3f4f4;
+  background: #f3f4f4;
   border: none; // Get rid of default border in Firefox
   border-radius: 99px;
   appearance: none;
 
   &::-webkit-progress-bar {
-    background-color: #f3f4f4;
+    background: #f3f4f4;
     border-radius: 99px;
   }
 
@@ -99,14 +99,23 @@ progress {
   }
 
   &::-ms-fill {
+    background: $blue-gradient;
     border: none; // Get rid of default border in IE 11
   }
 
-  &[value='0'] {
-    background-color: $ice;
+  &:not([value]) {
+    background: $ice;
+
+    &::-ms-fill {
+      animation-name: none; // remove ie animation
+    }
 
     &::-webkit-progress-bar {
-      background-color: $ice;
+      background: $ice;
+    }
+
+    &::-moz-progress-bar {
+      background: $ice;
     }
   }
 }

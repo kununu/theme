@@ -5,11 +5,17 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-color: $ice;
-  
-  @media (min-width: 1680px) {
-    margin: 0 auto;
+}
+
+@media (min-width: 1680px) {
+  body {
     width: 1920px;
+    margin: 0 auto;
     background: $dark;
+  }
+
+  body > div {
+    background-color: $ice;
   }
 }
 
@@ -131,6 +137,7 @@ progress {
     width: 1200px;
     margin: 0 auto;
   }
+
   @media (min-width: 1680px) {
     width: 1384px;
     margin: 0 auto;
@@ -143,12 +150,15 @@ progress {
   @media (min-width: 768px) {
     margin: 0 30px;
   }
+
   @media (min-width: 1024px) {
     margin: 0 15px;
   }
+
   @media (min-width: 1280px) {
     margin: 0;
   }
+
   @media (min-width: 1680px) {
     margin: 0;
   }
@@ -160,6 +170,7 @@ progress {
   @media (min-width: 768px) {
     padding: 0 30px;
   }
+
   @media (min-width: 1024px) {
     padding: 0 15px;
   }

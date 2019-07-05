@@ -1,8 +1,8 @@
 
-.gridContainer {  
+.gridContainer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   grid-gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 @for $i from 1 through 4 {
@@ -19,8 +19,8 @@
 
 @media (min-width: 768px) {
   .gridContainer {
-    grid-template-columns: repeat(6, 1fr);
     grid-gap: 24px; /* duplicated */
+    grid-template-columns: repeat(6, 1fr);
   }
 
   @for $i from 1 through 6 {
@@ -32,10 +32,10 @@
 
 @media (min-width: 1024px) {
   .gridContainer {
-    grid-template-columns: repeat(12, 1fr);
     grid-gap: 16px;
+    grid-template-columns: repeat(12, 1fr);
   }
-  
+
   @for $i from 1 through 12 {
     .col-l-#{$i} {
       grid-column-end: span $i;
@@ -45,21 +45,21 @@
 
 @media (min-width: 1280px) {
   .gridContainer {
-    grid-template-columns: repeat(12, 1fr); /* duplicated */
     grid-gap: 24px;
+    grid-template-columns: repeat(12, 1fr); /* duplicated */
   }
 }
 
 @media (min-width: 1680px) {
   .gridContainer {
-    grid-template-columns: repeat(12, 1fr); /* duplicated */
     grid-gap: 32px;
+    grid-template-columns: repeat(12, 1fr); /* duplicated */
   }
 }
 
 @media (min-width: 1920px) {
   .gridContainer {
-    grid-template-columns: repeat(12, 1fr); /* duplicated */
     grid-gap: 32px; /* duplicated */
+    grid-template-columns: repeat(12, 1fr); /* duplicated */
   }
 }

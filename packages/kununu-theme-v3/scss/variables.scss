@@ -31,8 +31,11 @@ $green-gradient: linear-gradient(97deg, $green, $gross-green);
 $mobile-m-media: 360px;
 $mobile-l-media: 375px;
 $mobile-xl-media: 412px;
-$tablet-media: 414px;
-$desktop-media: 1025px;
+$tablet-media: 768px;
+$desktop-s-media: 1024px;
+$desktop-m-media: 1280px;
+$desktop-l-media: 1680px;
+$desktop-xl-media: 1920px;
 
 /*
  * Spacing

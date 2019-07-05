@@ -7,7 +7,7 @@ body {
   background-color: $ice;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: $desktop-xl-media) {
   body {
     width: 1920px;
     margin: 0 auto;
@@ -133,12 +133,12 @@ progress {
 }
 
 .generalContainer {
-  @media (min-width: 1280px) {
+  @media (min-width: $desktop-m-media) {
     width: 1200px;
     margin: 0 auto;
   }
 
-  @media (min-width: 1680px) {
+  @media (min-width: $desktop-l-media) {
     width: 1384px;
     margin: 0 auto;
   }
@@ -147,19 +147,19 @@ progress {
 .generalMargin {
   margin: 0 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-media) {
     margin: 0 30px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-s-media) {
     margin: 0 15px;
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: $desktop-m-media) {
     margin: 0;
   }
 
-  @media (min-width: 1680px) {
+  @media (min-width: $desktop-l-media) {
     margin: 0;
   }
 }

@@ -1,4 +1,6 @@
 /* stylelint-disable value-no-vendor-prefix, property-no-vendor-prefix */
+@import './variables.scss';
+
 .gridContainer {
   display: grid;
   display: -ms-grid;
@@ -15,14 +17,14 @@
   }
 }
 
-@media (min-width: 375px) {
+@media (min-width: $mobile-l-media) {
   .gridContainer {
     grid-gap: 24px;
     -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-media) {
   .gridContainer {
     grid-template-columns: repeat(6, 1fr);
     -ms-grid-columns: 1fr 24px 1fr 24px 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
@@ -36,7 +38,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $desktop-s-media) {
   .gridContainer {
     grid-gap: 16px;
     grid-template-columns: repeat(12, 1fr);
@@ -61,23 +63,16 @@
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: $desktop-m-media) {
   .gridContainer {
     grid-gap: 24px;
     -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
   }
 }
 
-@media (min-width: 1680px) {
+@media (min-width: $desktop-l-media) {
   .gridContainer {
     grid-gap: 32px;
     -ms-grid-columns: 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr;
-  }
-}
-
-@media (min-width: 1920px) {
-  .gridContainer {
-    grid-gap: 32px; /* duplicated */
-    -ms-grid-columns: 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr; /* duplicated */
   }
 }

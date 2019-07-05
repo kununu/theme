@@ -145,21 +145,17 @@ progress {
 }
 
 .generalMargin {
-  margin: 0 20px;
+  margin: 0 $horizontal-spacing-mobile;
 
   @media (min-width: $tablet-media) {
-    margin: 0 30px;
+    margin: 0 $horizontal-spacing-tablet;
   }
 
   @media (min-width: $desktop-s-media) {
-    margin: 0 15px;
+    margin: 0 $horizontal-spacing-desktop;
   }
 
   @media (min-width: $desktop-m-media) {
-    margin: 0;
-  }
-
-  @media (min-width: $desktop-l-media) {
-    margin: 0;
+    margin: 0 $horizontal-spacing-desktop-m;
   }
 }

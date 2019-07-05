@@ -24,7 +24,6 @@
 
 @media (min-width: 768px) {
   .gridContainer {
-    grid-gap: 24px; /* duplicated */
     grid-template-columns: repeat(6, 1fr);
     -ms-grid-columns: 1fr 24px 1fr 24px 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
   }
@@ -54,6 +53,7 @@
   // IE only - it doesn't put the next column after the previous, it overlaps them
   // so we need to explicitaly set the initial position of the next column
   // current designs don't ask for different columns in different sizes, only mobile e desktop
+  // so we will keep simple for now
   @for $i from 1 through 12 {
     .col-ie-#{$i} {
       -ms-grid-column: 2 * $i - 1;
@@ -64,7 +64,6 @@
 @media (min-width: 1280px) {
   .gridContainer {
     grid-gap: 24px;
-    grid-template-columns: repeat(12, 1fr); /* duplicated */
     -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
   }
 }
@@ -72,7 +71,6 @@
 @media (min-width: 1680px) {
   .gridContainer {
     grid-gap: 32px;
-    grid-template-columns: repeat(12, 1fr); /* duplicated */
     -ms-grid-columns: 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr;
   }
 }
@@ -80,7 +78,6 @@
 @media (min-width: 1920px) {
   .gridContainer {
     grid-gap: 32px; /* duplicated */
-    grid-template-columns: repeat(12, 1fr); /* duplicated */
     -ms-grid-columns: 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr; /* duplicated */
   }
 }

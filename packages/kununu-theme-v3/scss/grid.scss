@@ -1,13 +1,24 @@
 /* stylelint-disable value-no-vendor-prefix, property-no-vendor-prefix */
 @import './variables.scss';
 
+@function grid-repeat-ie($repeat, $width, $gap) {
+  $list: ();
+  @for $i from 1 through $repeat {
+    $list: append($list, $width, space);
+    $list: append($list, $gap, space);
+  }
+  $list: append($list, $width);
+  @return $list;
+}
+
+
 .gridContainer {
   display: grid;
   display: -ms-grid;
   grid-gap: 16px;
   grid-template-columns: repeat(4, 1fr);
   // IE does not have the concept of gaps, so here we defined more columns (16px) to work as gaps
-  -ms-grid-columns: 1fr 16px 1fr 16px 1fr 16px 1fr;
+  -ms-grid-columns: grid-repeat-ie(3, 1fr, 16px);
 }
 
 @for $i from 1 through 4 {
@@ -27,14 +38,14 @@
 @media (min-width: $mobile-l-media) {
   .gridContainer {
     grid-gap: 24px;
-    -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr;
+    -ms-grid-columns: grid-repeat-ie(3, 1fr, 24px);
   }
 }
 
 @media (min-width: $tablet-media) {
   .gridContainer {
     grid-template-columns: repeat(6, 1fr);
-    -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
+    -ms-grid-columns: grid-repeat-ie(5, 1fr, 24px);
   }
 
   @for $i from 1 through 6 {
@@ -56,7 +67,7 @@
   .gridContainer {
     grid-gap: 16px;
     grid-template-columns: repeat(12, 1fr);
-    -ms-grid-columns: 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr;
+    -ms-grid-columns: grid-repeat-ie(11, 1fr, 16px);
   }
 
   @for $i from 1 through 12 {
@@ -66,10 +77,6 @@
     }
   }
 
-  // IE only - it doesn't put the next column after the previous, it overlaps them
-  // so we need to explicitly set the initial position of the next column
-  // current designs don't ask for different columns in different sizes, only mobile e desktop
-  // so we will keep simple for now
   @for $i from 1 through 12 {
     .col-start-l-#{$i} {
       grid-column-start: $i;
@@ -81,13 +88,13 @@
 @media (min-width: $desktop-m-media) {
   .gridContainer {
     grid-gap: 24px;
-    -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
+    -ms-grid-columns: grid-repeat-ie(11, 1fr, 24px);
   }
 }
 
 @media (min-width: $desktop-l-media) {
   .gridContainer {
     grid-gap: 32px;
-    -ms-grid-columns: 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr;
+    -ms-grid-columns: grid-repeat-ie(11, 1fr, 32px);
   }
 }

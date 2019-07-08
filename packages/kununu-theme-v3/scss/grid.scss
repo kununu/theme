@@ -18,8 +18,14 @@
 }
 
 @for $i from 1 through 4 {
+  .row-#{$i} {
+    grid-row: $i;
+  }
+}
+
+@for $i from 1 through 4 {
   .col-start-s-#{$i} {
-    grid-column: $i;
+    grid-column-start: $i;
     -ms-grid-column: 2 * $i - 1;
   }
 }
@@ -46,7 +52,7 @@
 
   @for $i from 1 through 6 {
     .col-start-m-#{$i} {
-      grid-column: $i;
+      grid-column-start: $i;
       -ms-grid-column: 2 * $i - 1;
     }
   }
@@ -71,8 +77,8 @@
   // current designs don't ask for different columns in different sizes, only mobile e desktop
   // so we will keep simple for now
   @for $i from 1 through 12 {
-    .col-ie-#{$i} {
-      grid-column: $i;
+    .col-start-l-#{$i} {
+      grid-column-start: $i;
       -ms-grid-column: 2 * $i - 1;
     }
   }

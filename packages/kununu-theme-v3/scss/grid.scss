@@ -18,12 +18,6 @@
 }
 
 @for $i from 1 through 4 {
-  .row-#{$i} {
-    grid-row: $i;
-  }
-}
-
-@for $i from 1 through 4 {
   .col-start-s-#{$i} {
     grid-column-start: $i;
     -ms-grid-column: 2 * $i - 1;
@@ -40,7 +34,7 @@
 @media (min-width: $tablet-media) {
   .gridContainer {
     grid-template-columns: repeat(6, 1fr);
-    -ms-grid-columns: 1fr 24px 1fr 24px 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
+    -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
   }
 
   @for $i from 1 through 6 {

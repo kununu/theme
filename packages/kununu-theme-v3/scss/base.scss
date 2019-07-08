@@ -132,7 +132,7 @@ progress {
   }
 }
 
-.generalContainer {
+.globalContainer {
   @media (min-width: $desktop-m-media) {
     width: 1200px;
     margin: 0 auto;
@@ -144,7 +144,7 @@ progress {
   }
 }
 
-.generalMargin {
+.globalMargin {
   margin: 0 $horizontal-spacing-mobile;
 
   @media (min-width: $tablet-media) {

@@ -3,11 +3,11 @@
 
 .gridContainer {
   display: grid;
-  // display: -ms-grid;
+  display: -ms-grid;
   grid-gap: 16px;
   grid-template-columns: repeat(4, 1fr);
   // IE does not have the concept of gaps, so here we defined more columns (16px) to work as gaps
-  // -ms-grid-columns: 1fr 16px 1fr 16px 1fr 16px 1fr;
+  -ms-grid-columns: 1fr 16px 1fr 16px 1fr 16px 1fr;
 }
 
 @for $i from 1 through 4 {
@@ -20,14 +20,14 @@
 @media (min-width: $mobile-l-media) {
   .gridContainer {
     grid-gap: 24px;
-    // -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr;
+    -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr;
   }
 }
 
 @media (min-width: $tablet-media) {
   .gridContainer {
     grid-template-columns: repeat(6, 1fr);
-    // -ms-grid-columns: 1fr 24px 1fr 24px 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
+    -ms-grid-columns: 1fr 24px 1fr 24px 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
   }
 
   @for $i from 1 through 6 {
@@ -42,7 +42,7 @@
   .gridContainer {
     grid-gap: 16px;
     grid-template-columns: repeat(12, 1fr);
-    // -ms-grid-columns: 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr;
+    -ms-grid-columns: 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr;
   }
 
   @for $i from 1 through 12 {
@@ -66,13 +66,13 @@
 @media (min-width: $desktop-m-media) {
   .gridContainer {
     grid-gap: 24px;
-    // -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
+    -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
   }
 }
 
 @media (min-width: $desktop-l-media) {
   .gridContainer {
     grid-gap: 32px;
-    // -ms-grid-columns: 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr;
+    -ms-grid-columns: 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr 32px 1fr;
   }
 }

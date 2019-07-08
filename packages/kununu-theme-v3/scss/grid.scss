@@ -17,6 +17,13 @@
   }
 }
 
+@for $i from 1 through 4 {
+  .col-start-s-#{$i} {
+    grid-column: $i;
+    -ms-grid-column: 2 * $i - 1;
+  }
+}
+
 @media (min-width: $mobile-l-media) {
   .gridContainer {
     grid-gap: 24px;
@@ -34,6 +41,13 @@
     .col-m-#{$i} {
       grid-column-end: span $i;
       -ms-grid-column-span: 2 * $i - 1;
+    }
+  }
+
+  @for $i from 1 through 6 {
+    .col-start-m-#{$i} {
+      grid-column: $i;
+      -ms-grid-column: 2 * $i - 1;
     }
   }
 }
@@ -58,6 +72,7 @@
   // so we will keep simple for now
   @for $i from 1 through 12 {
     .col-ie-#{$i} {
+      grid-column: $i;
       -ms-grid-column: 2 * $i - 1;
     }
   }

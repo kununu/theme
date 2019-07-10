@@ -3,14 +3,15 @@
 
 @function grid-repeat-ie($repeat, $width, $gap) {
   $list: ();
+
   @for $i from 1 through $repeat {
     $list: append($list, $width, space);
     $list: append($list, $gap, space);
   }
   $list: append($list, $width);
+
   @return $list;
 }
-
 
 .gridContainer {
   display: grid;
@@ -19,6 +20,32 @@
   grid-template-columns: repeat(4, 1fr);
   // IE does not have the concept of gaps, so here we defined more columns (16px) to work as gaps
   -ms-grid-columns: grid-repeat-ie(3, 1fr, 16px);
+
+  @media (min-width: $mobile-l-media) {
+    grid-gap: 24px;
+    -ms-grid-columns: grid-repeat-ie(3, 1fr, 24px);
+  }
+
+  @media (min-width: $tablet-media) {
+    grid-template-columns: repeat(6, 1fr);
+    -ms-grid-columns: grid-repeat-ie(5, 1fr, 24px);
+  }
+
+  @media (min-width: $desktop-s-media) {
+    grid-gap: 16px;
+    grid-template-columns: repeat(12, 1fr);
+    -ms-grid-columns: grid-repeat-ie(11, 1fr, 16px);
+  }
+
+  @media (min-width: $desktop-m-media) {
+    grid-gap: 24px;
+    -ms-grid-columns: grid-repeat-ie(11, 1fr, 24px);
+  }
+
+  @media (min-width: $desktop-l-media) {
+    grid-gap: 32px;
+    -ms-grid-columns: grid-repeat-ie(11, 1fr, 32px);
+  }
 }
 
 @for $i from 1 through 4 {
@@ -26,75 +53,37 @@
     grid-column-end: span $i;
     -ms-grid-column-span: 2 * $i - 1;
   }
-}
 
-@for $i from 1 through 4 {
   .col-start-s-#{$i} {
-    grid-column-start: $i;
     -ms-grid-column: 2 * $i - 1;
-  }
-}
-
-@media (min-width: $mobile-l-media) {
-  .gridContainer {
-    grid-gap: 24px;
-    -ms-grid-columns: grid-repeat-ie(3, 1fr, 24px);
+    grid-column-start: $i;
   }
 }
 
 @media (min-width: $tablet-media) {
-  .gridContainer {
-    grid-template-columns: repeat(6, 1fr);
-    -ms-grid-columns: grid-repeat-ie(5, 1fr, 24px);
-  }
-
   @for $i from 1 through 6 {
     .col-m-#{$i} {
       grid-column-end: span $i;
       -ms-grid-column-span: 2 * $i - 1;
     }
-  }
 
-  @for $i from 1 through 6 {
     .col-start-m-#{$i} {
-      grid-column-start: $i;
       -ms-grid-column: 2 * $i - 1;
+      grid-column-start: $i;
     }
   }
 }
 
 @media (min-width: $desktop-s-media) {
-  .gridContainer {
-    grid-gap: 16px;
-    grid-template-columns: repeat(12, 1fr);
-    -ms-grid-columns: grid-repeat-ie(11, 1fr, 16px);
-  }
-
   @for $i from 1 through 12 {
     .col-l-#{$i} {
       grid-column-end: span $i;
       -ms-grid-column-span: 2 * $i - 1;
     }
-  }
 
-  @for $i from 1 through 12 {
     .col-start-l-#{$i} {
-      grid-column-start: $i;
       -ms-grid-column: 2 * $i - 1;
+      grid-column-start: $i;
     }
-  }
-}
-
-@media (min-width: $desktop-m-media) {
-  .gridContainer {
-    grid-gap: 24px;
-    -ms-grid-columns: grid-repeat-ie(11, 1fr, 24px);
-  }
-}
-
-@media (min-width: $desktop-l-media) {
-  .gridContainer {
-    grid-gap: 32px;
-    -ms-grid-columns: grid-repeat-ie(11, 1fr, 32px);
   }
 }

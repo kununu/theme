@@ -13,38 +13,45 @@
   @return $list;
 }
 
+$grip-gap-mobile: 16px;
+$grip-gap-mobile-l: 24px;
+$grip-gap-tablet: 24px;
+$grip-gap-desktop-s: 16px;
+$grip-gap-desktop-m: 24px;
+$grip-gap-desktop-l: 32px;
+
 .gridContainer {
   display: grid;
   display: -ms-grid;
-  grid-gap: 16px;
+  grid-gap: $grip-gap-mobile;
   grid-template-columns: repeat(4, 1fr);
-  // IE does not have the concept of gaps, so here we defined more columns (16px) to work as gaps
-  -ms-grid-columns: grid-repeat-ie(3, 1fr, 16px);
+  // IE does not have the concept of gaps, so here we defined more columns ($grip-gap-mobile - 16px) to work as gaps
+  -ms-grid-columns: grid-repeat-ie(3, 1fr, $grip-gap-mobile);
 
   @media (min-width: $mobile-l-media) {
-    grid-gap: 24px;
-    -ms-grid-columns: grid-repeat-ie(3, 1fr, 24px);
+    grid-gap: $grip-gap-mobile-l;
+    -ms-grid-columns: grid-repeat-ie(3, 1fr, $grip-gap-mobile-l);
   }
 
   @media (min-width: $tablet-media) {
     grid-template-columns: repeat(6, 1fr);
-    -ms-grid-columns: grid-repeat-ie(5, 1fr, 24px);
+    -ms-grid-columns: grid-repeat-ie(5, 1fr, $grip-gap-tablet);
   }
 
   @media (min-width: $desktop-s-media) {
-    grid-gap: 16px;
+    grid-gap: $grip-gap-desktop-s;
     grid-template-columns: repeat(12, 1fr);
-    -ms-grid-columns: grid-repeat-ie(11, 1fr, 16px);
+    -ms-grid-columns: grid-repeat-ie(11, 1fr, 16p$grip-gap-desktop-s);
   }
 
   @media (min-width: $desktop-m-media) {
-    grid-gap: 24px;
-    -ms-grid-columns: grid-repeat-ie(11, 1fr, 24px);
+    grid-gap: $grip-gap-desktop-m;
+    -ms-grid-columns: grid-repeat-ie(11, 1fr, $grip-gap-desktop-m);
   }
 
   @media (min-width: $desktop-l-media) {
-    grid-gap: 32px;
-    -ms-grid-columns: grid-repeat-ie(11, 1fr, 32px);
+    grid-gap: $grip-gap-desktop-l;
+    -ms-grid-columns: grid-repeat-ie(11, 1fr, $grip-gap-desktop-l);
   }
 }
 

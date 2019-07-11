@@ -14,7 +14,7 @@ body {
     background-color: $dark;
   }
 
-  body > div:first-child {
+  body > :first-child {
     background-color: $ice;
   }
 }

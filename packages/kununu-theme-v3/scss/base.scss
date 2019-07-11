@@ -11,10 +11,10 @@ body {
   body {
     width: $desktop-xl-media;
     margin: 0 auto;
-    background: $dark;
+    background-color: $dark;
   }
 
-  #__next {
+  body > div:first-child {
     background-color: $ice;
   }
 }

@@ -41,7 +41,7 @@ $grip-gap-desktop-l: 32px;
   @media (min-width: $desktop-s-media) {
     grid-gap: $grip-gap-desktop-s;
     grid-template-columns: repeat(12, 1fr);
-    -ms-grid-columns: grid-repeat-ie(11, 1fr, 16p$grip-gap-desktop-s);
+    -ms-grid-columns: grid-repeat-ie(11, 1fr, $grip-gap-desktop-s);
   }
 
   @media (min-width: $desktop-m-media) {

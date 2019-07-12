@@ -11,11 +11,10 @@ body {
   body {
     width: $desktop-xl-media;
     margin: 0 auto;
-    background-color: $dark;
   }
 
   body > div:first-of-type {
-    background-color: $ice;
+    box-shadow: 0 12px 24px 0 rgba($black, .07);
   }
 }
 

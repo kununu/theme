@@ -1,0 +1,96 @@
+/* stylelint-disable value-no-vendor-prefix, property-no-vendor-prefix */
+@import './variables.scss';
+
+@function grid-repeat-ie($repeat, $width, $gap) {
+  $list: ();
+
+  @for $i from 1 through $repeat {
+    $list: append($list, $width, space);
+    $list: append($list, $gap, space);
+  }
+  $list: append($list, $width);
+
+  @return $list;
+}
+
+$grip-gap-mobile: 16px;
+$grip-gap-mobile-l: 24px;
+$grip-gap-tablet: 24px;
+$grip-gap-desktop-s: 16px;
+$grip-gap-desktop-m: 24px;
+$grip-gap-desktop-l: 32px;
+
+.gridContainer {
+  display: grid;
+  display: -ms-grid;
+  grid-gap: $grip-gap-mobile;
+  grid-template-columns: repeat(4, 1fr);
+  // IE does not have the concept of gaps, so here we defined more columns ($grip-gap-mobile - 16px) to work as gaps
+  -ms-grid-columns: grid-repeat-ie(3, 1fr, $grip-gap-mobile);
+
+  @media (min-width: $mobile-l-media) {
+    grid-gap: $grip-gap-mobile-l;
+    -ms-grid-columns: grid-repeat-ie(3, 1fr, $grip-gap-mobile-l);
+  }
+
+  @media (min-width: $tablet-media) {
+    grid-template-columns: repeat(6, 1fr);
+    -ms-grid-columns: grid-repeat-ie(5, 1fr, $grip-gap-tablet);
+  }
+
+  @media (min-width: $desktop-s-media) {
+    grid-gap: $grip-gap-desktop-s;
+    grid-template-columns: repeat(12, 1fr);
+    -ms-grid-columns: grid-repeat-ie(11, 1fr, $grip-gap-desktop-s);
+  }
+
+  @media (min-width: $desktop-m-media) {
+    grid-gap: $grip-gap-desktop-m;
+    -ms-grid-columns: grid-repeat-ie(11, 1fr, $grip-gap-desktop-m);
+  }
+
+  @media (min-width: $desktop-l-media) {
+    grid-gap: $grip-gap-desktop-l;
+    -ms-grid-columns: grid-repeat-ie(11, 1fr, $grip-gap-desktop-l);
+  }
+}
+
+@for $i from 1 through 4 {
+  .col-s-#{$i} {
+    grid-column-end: span $i;
+    -ms-grid-column-span: 2 * $i - 1;
+  }
+
+  .col-start-s-#{$i} {
+    -ms-grid-column: 2 * $i - 1;
+    grid-column-start: $i;
+  }
+}
+
+@media (min-width: $tablet-media) {
+  @for $i from 1 through 6 {
+    .col-m-#{$i} {
+      grid-column-end: span $i;
+      -ms-grid-column-span: 2 * $i - 1;
+    }
+
+    .col-start-m-#{$i} {
+      -ms-grid-column: 2 * $i - 1;
+      grid-column-start: $i;
+    }
+  }
+}
+
+@media (min-width: $desktop-s-media) {
+  @for $i from 1 through 12 {
+    .col-l-#{$i} {
+      grid-column-end: span $i;
+      -ms-grid-column-span: 2 * $i - 1;
+    }
+
+    .col-start-l-#{$i} {
+      -ms-grid-column: 2 * $i - 1;
+      grid-column-start: $i;
+    }
+  }
+}

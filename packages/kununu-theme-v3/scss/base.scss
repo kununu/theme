@@ -7,6 +7,17 @@ body {
   background-color: $ice;
 }
 
+@media (min-width: $desktop-xl-media) {
+  body {
+    max-width: $desktop-xl-media;
+    margin: 0 auto;
+  }
+
+  body > div:first-of-type {
+    box-shadow: 0 12px 24px 0 rgba($black, .07);
+  }
+}
+
 /* 1. Correct the line height in all browsers. */
 /* 2. Prevent adjustments of font size after orientation changes in iOS. */
 html {
@@ -117,5 +128,37 @@ progress {
     &::-moz-progress-bar {
       background: $ice;
     }
+  }
+}
+
+.globalContainer {
+  @media (min-width: $desktop-m-media) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-l-media) {
+    width: 1384px;
+    margin: 0 auto;
+  }
+}
+
+.globalMargin {
+  margin-right: $horizontal-spacing-mobile;
+  margin-left: $horizontal-spacing-mobile;
+
+  @media (min-width: $tablet-media) {
+    margin-right: $horizontal-spacing-tablet;
+    margin-left: $horizontal-spacing-tablet;
+  }
+
+  @media (min-width: $desktop-s-media) {
+    margin-right: $horizontal-spacing-desktop-s;
+    margin-left: $horizontal-spacing-desktop-s;
+  }
+
+  @media (min-width: $desktop-m-media) {
+    margin-right: $horizontal-spacing-desktop-m;
+    margin-left: $horizontal-spacing-desktop-m;
   }
 }

@@ -1,9 +1,16 @@
 @import './variables.scss';
+@import './mixins.scss';
 
 /* Remove the margin in all browsers */
 body {
   margin: 0;
   overflow-x: hidden;
+  font-weight: normal;
+  font-family: sans-serif;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
   background-color: $ice;
 }
 
@@ -70,6 +77,14 @@ button,
   }
 }
 
+p {
+  @include font-props($charcoal-grey,  18px, null, 24px);
+}
+
+a {
+  color: $deep-sky-blue;
+}
+
 /* Correct the odd appearance in Safari */
 input[type="search"] { // stylelint-disable-line string-quotes
   outline-offset: -2px;
@@ -128,37 +143,5 @@ progress {
     &::-moz-progress-bar {
       background: $ice;
     }
-  }
-}
-
-.globalContainer {
-  @media (min-width: $desktop-m-media) {
-    width: 1200px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: $desktop-l-media) {
-    width: 1384px;
-    margin: 0 auto;
-  }
-}
-
-.globalMargin {
-  margin-right: $horizontal-spacing-mobile;
-  margin-left: $horizontal-spacing-mobile;
-
-  @media (min-width: $tablet-media) {
-    margin-right: $horizontal-spacing-tablet;
-    margin-left: $horizontal-spacing-tablet;
-  }
-
-  @media (min-width: $desktop-s-media) {
-    margin-right: $horizontal-spacing-desktop-s;
-    margin-left: $horizontal-spacing-desktop-s;
-  }
-
-  @media (min-width: $desktop-m-media) {
-    margin-right: $horizontal-spacing-desktop-m;
-    margin-left: $horizontal-spacing-desktop-m;
   }
 }

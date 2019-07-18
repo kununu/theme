@@ -1,9 +1,16 @@
 @import './variables.scss';
+@import './mixins.scss';
 
 /* Remove the margin in all browsers */
 body {
   margin: 0;
   overflow-x: hidden;
+  font-weight: normal;
+  font-family: sans-serif;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
   background-color: $ice;
 }
 
@@ -68,6 +75,14 @@ button,
   &:focus {
     outline: 0;
   }
+}
+
+p {
+  @include font-props($charcoal-grey,  18px, null, 24px);
+}
+
+a {
+  color: $deep-sky-blue;
 }
 
 /* Correct the odd appearance in Safari */

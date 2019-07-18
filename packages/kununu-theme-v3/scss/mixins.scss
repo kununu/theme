@@ -1,0 +1,27 @@
+@mixin font-props($color: null, $font-size: null, $letter-spacing: null, $line-height: null, $font-weight: null, $text-align: null) {
+  margin: 0;
+
+  @if ($color) {
+    color: $color;
+  }
+
+  @if ($font-size) {
+    font-size: $font-size;
+  }
+
+  @if ($letter-spacing) {
+    letter-spacing: $letter-spacing;
+  }
+
+  @if ($line-height) {
+    line-height: $line-height;
+  }
+
+  @if ($font-weight) {
+    font-weight: $font-weight;
+  }
+
+  @if ($text-align) {
+    text-align: $text-align;
+  }
+}

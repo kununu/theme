@@ -1,41 +1,5 @@
 @import './variables.scss';
-
-body {
-  font-weight: normal;
-  font-family: sans-serif;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-}
-
-@mixin font-props($color: null, $font-size: null, $letter-spacing: null, $line-height: null, $font-weight: null, $text-align: null) {
-  margin: 0;
-
-  @if ($color) {
-    color: $color;
-  }
-
-  @if ($font-size) {
-    font-size: $font-size;
-  }
-
-  @if ($letter-spacing) {
-    letter-spacing: $letter-spacing;
-  }
-
-  @if ($line-height) {
-    line-height: $line-height;
-  }
-
-  @if ($font-weight) {
-    font-weight: $font-weight;
-  }
-
-  @if ($text-align) {
-    text-align: $text-align;
-  }
-}
+@import './mixins.scss';
 
 .h1 {
   @include font-props($dark, 22px, -.27px, null, bold, center);
@@ -70,12 +34,4 @@ body {
   & .center {
     @include font-props(null, null, null, null, null, center);
   }
-}
-
-p {
-  @include font-props($charcoal-grey,  18px, null, 24px);
-}
-
-a {
-  color: $deep-sky-blue;
 }

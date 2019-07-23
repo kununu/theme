@@ -3,13 +3,6 @@
 @import './mixins.scss';
 @import './variables.scss';
 
-$grip-gap-mobile: 16px;
-$grip-gap-mobile-l: 24px;
-$grip-gap-tablet: 24px;
-$grip-gap-desktop-s: 16px;
-$grip-gap-desktop-m: 24px;
-$grip-gap-desktop-l: 32px;
-
 @for $i from 1 through 4 {
   .col-s-#{$i} {
     grid-column-end: span $i;

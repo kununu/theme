@@ -79,6 +79,8 @@
 }
 
 .gridWrapperMargins {
+  margin-top: $horizontal-spacing-mobile;
+  margin-bottom: $horizontal-spacing-mobile;
   -ms-grid-rows: auto $horizontal-spacing-mobile auto;
 
   @media (min-width: $tablet-media) {

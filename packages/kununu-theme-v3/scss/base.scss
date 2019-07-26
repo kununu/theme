@@ -15,12 +15,9 @@ body {
 }
 
 @media (min-width: $desktop-xl-media) {
-  body {
+  body > div:first-of-type {
     max-width: $desktop-xl-media;
     margin: 0 auto;
-  }
-
-  body > div:first-of-type {
     box-shadow: 0 12px 24px 0 rgba($black, .07);
   }
 }

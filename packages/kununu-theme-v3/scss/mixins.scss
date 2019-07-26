@@ -1,3 +1,6 @@
+@import './variables.scss';
+
+/* TYPOGRAPHY */
 @mixin font-props($color: null, $font-size: null, $letter-spacing: null, $line-height: null, $font-weight: null, $text-align: null) {
   margin: 0;
 
@@ -23,5 +26,59 @@
 
   @if ($text-align) {
     text-align: $text-align;
+  }
+}
+
+/* GRID */
+
+/**
+ * Generates IE11 -ms-grid-columns
+ */
+@function grid-repeat-ie($repeat, $width, $gap) {
+  $list: ();
+
+  @for $i from 1 through $repeat {
+    $list: append($list, $width, space);
+    $list: append($list, $gap, space);
+  }
+  $list: append($list, $width);
+
+  @return $list;
+}
+
+/**
+ * Calculates a width value based on
+ * a provided grid column gap
+ */
+@function width-with-gap($gap) {
+  // Original 'recipe': calc(100% - 5 * $gap) / 6 * 4 + (3 * $gap)
+  $width-with-gap: calc(66.6% - .3 * #{$gap});
+
+  @return $width-with-gap;
+}
+
+/**
+ * Generates media queries for a defined width
+ * that uses a provided grid column gap
+ */
+@mixin gridInnerWidth() {
+  @media (min-width: $tablet-media) {
+    width: width-with-gap($grip-gap-tablet);
+  }
+
+  @media (min-width: $desktop-s-media) {
+    width: width-with-gap($grip-gap-desktop-s);
+  }
+
+  @media (min-width: $desktop-m-media) {
+    width: width-with-gap($grip-gap-desktop-m);
+  }
+
+  @media (min-width: $desktop-l-media) {
+    width: width-with-gap($grip-gap-desktop-l);
+  }
+
+  @media (min-width: $desktop-xl-media) {
+    width: width-with-gap($grip-gap-desktop-l);
   }
 }

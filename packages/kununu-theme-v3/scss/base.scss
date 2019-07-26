@@ -83,7 +83,7 @@ a {
 }
 
 /* Correct the odd appearance in Safari */
-input[type="search"] { // stylelint-disable-line string-quotes
+input[type='search'] { // stylelint-disable-line string-quotes
   outline-offset: -2px;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 
@@ -140,5 +140,13 @@ progress {
     &::-moz-progress-bar {
       background: $ice;
     }
+  }
+
+  @media (min-width: $desktop-s-media) {
+    width: 90px;
+  }
+
+  @media (min-width: $desktop-m-media) {
+    width: 108px;
   }
 }

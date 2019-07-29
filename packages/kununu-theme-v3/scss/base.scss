@@ -83,7 +83,7 @@ a {
 }
 
 /* Correct the odd appearance in Safari */
-input[type="search"] { // stylelint-disable-line string-quotes
+input[type='search'] { // stylelint-disable-line string-quotes
   outline-offset: -2px;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 
@@ -94,7 +94,7 @@ input[type="search"] { // stylelint-disable-line string-quotes
 
 progress {
   position: relative;
-  width: 108px;
+  width: 100%;
   height: 4px;
   background: #f3f4f4;
   border: none; // Get rid of default border in Firefox

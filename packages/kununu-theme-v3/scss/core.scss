@@ -13,21 +13,21 @@
 }
 
 .globalMargin {
-  margin-right: $horizontal-spacing-mobile;
-  margin-left: $horizontal-spacing-mobile;
+  margin-right: $spacing-mobile;
+  margin-left: $spacing-mobile;
 
   @media (min-width: $tablet-media) {
-    margin-right: $horizontal-spacing-tablet;
-    margin-left: $horizontal-spacing-tablet;
+    margin-right: $spacing-tablet;
+    margin-left: $spacing-tablet;
   }
 
   @media (min-width: $desktop-s-media) {
-    margin-right: $horizontal-spacing-desktop-s;
-    margin-left: $horizontal-spacing-desktop-s;
+    margin-right: $spacing-desktop-s;
+    margin-left: $spacing-desktop-s;
   }
 
   @media (min-width: $desktop-m-media) {
-    margin-right: $horizontal-spacing-desktop-m;
-    margin-left: $horizontal-spacing-desktop-m;
+    margin-right: $spacing-desktop-m;
+    margin-left: $spacing-desktop-m;
   }
 }

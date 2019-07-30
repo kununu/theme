@@ -1,6 +1,6 @@
 {
   "name": "@kununu/kununu-theme-v3",
-  "version": "3.2.2-beta.1",
+  "version": "3.2.2",
   "description": "Sass styles for kununu applications",
   "repository": {
     "type": "git",

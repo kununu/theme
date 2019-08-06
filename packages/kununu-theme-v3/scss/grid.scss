@@ -47,6 +47,7 @@
   display: grid;
   display: -ms-grid;
   grid-gap: $grip-gap-mobile;
+  -ms-grid-rows: auto $grip-gap-mobile auto;
   grid-template-columns: repeat(4, 1fr);
   // IE does not have the concept of gaps, so here we defined more columns ($grip-gap-mobile - 16px) to work as gaps
   -ms-grid-columns: grid-repeat-ie(3, 1fr, $grip-gap-mobile);
@@ -58,11 +59,13 @@
 
   @media (min-width: $tablet-media) {
     grid-template-columns: repeat(6, 1fr);
+    -ms-grid-rows: auto $grip-gap-tablet auto;
     -ms-grid-columns: grid-repeat-ie(5, 1fr, $grip-gap-tablet);
   }
 
   @media (min-width: $desktop-s-media) {
     grid-gap: $grip-gap-desktop-s;
+    -ms-grid-rows: auto $grip-gap-desktop-s auto;
     grid-template-columns: repeat(12, 1fr);
     -ms-grid-columns: grid-repeat-ie(11, 1fr, $grip-gap-desktop-s);
   }
@@ -78,30 +81,9 @@
   }
 }
 
-.gridWrapperMargins {
-  margin-top: $horizontal-spacing-mobile;
-  margin-bottom: $horizontal-spacing-mobile;
-  -ms-grid-rows: auto $horizontal-spacing-mobile auto;
-
-  @media (min-width: $tablet-media) {
-    margin: $horizontal-spacing-tablet;
-    -ms-grid-rows: auto $horizontal-spacing-tablet auto;
-  }
-
-  @media (min-width: $desktop-s-media) {
-    margin: $grip-gap-desktop-s;
-    -ms-grid-rows: auto $grip-gap-desktop-s auto;
-  }
-
-  @media (min-width: $desktop-m-media) {
-    margin: 0 auto;
-  }
-}
-
 .gridWrapper {
   @extend .globalContainer;
   @extend .gridContainer;
-  @extend .gridWrapperMargins;
 }
 
 /*

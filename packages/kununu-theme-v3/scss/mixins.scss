@@ -82,3 +82,38 @@
     width: width-with-gap($grip-gap-desktop-l);
   }
 }
+
+/**
+ * Generates CSS selectors to style input
+ * placeholder that supports all browser vendors
+ *
+ * .foo {
+ *   @include placeholder {
+ *     color: green;
+ *   }
+ * }
+ *
+ */
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}

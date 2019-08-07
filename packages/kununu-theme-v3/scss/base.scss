@@ -83,6 +83,12 @@ p {
   @include font-props($charcoal-grey,  18px, null, 24px);
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 a {
   color: $deep-sky-blue;
 }

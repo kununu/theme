@@ -1,6 +1,6 @@
 {
   "name": "@kununu/kununu-theme-v3",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "Sass styles for kununu applications",
   "repository": {
     "type": "git",
@@ -19,6 +19,6 @@
     "lint": "stylelint 'scss/**/*.scss'"
   },
   "devDependencies": {
-    "@kununu/stylelint-config": "1.0.2"
+    "@kununu/stylelint-config": "1.0.3"
   }
 }

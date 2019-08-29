@@ -1,6 +1,14 @@
 @import './variables.scss';
 @import './mixins.scss';
 
+/* Smooths font rendering for Chrome-based browsers and Firefox */
+body,
+html {
+  -moz-font-feature-settings: 'kern'; // stylelint-disable-line property-no-vendor-prefix
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Remove the margin in all browsers */
 body {
   margin: 0;

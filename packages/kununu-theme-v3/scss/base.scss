@@ -1,6 +1,13 @@
 @import './variables.scss';
 @import './mixins.scss';
 
+/* Smooths font rendering for Chrome-based browsers and Firefox */
+body,
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Remove the margin in all browsers */
 body {
   margin: 0;

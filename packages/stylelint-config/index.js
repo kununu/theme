@@ -16,6 +16,7 @@ module.exports = {
     "comment-empty-line-before": ["always", {except: ["first-nested"], ignore: ["after-comment"]}],
     "comment-whitespace-inside": "always",
     "declaration-block-trailing-semicolon": "always",
+    "declaration-colon-newline-after": null,
     "declaration-colon-space-after": "always",
     "declaration-colon-space-before": "never",
     "function-url-quotes": "always",
@@ -28,8 +29,30 @@ module.exports = {
     "media-feature-range-operator-space-before": "always",
     "no-duplicate-selectors": true,
     "number-leading-zero": "always",
+    "order/order": [
+        {
+          "type": "at-rule",
+          "name": "extend"
+        },
+        {
+          "type": "at-rule",
+          "name": "include"
+        },
+        "declarations",
+        "rules",
+        {
+          "type": "at-rule",
+          "name": "media"
+        }
+    ],
+    "order/properties-order": [],
+    "plugin/rational-order": [true, {
+      "border-in-box-model": false,
+      "empty-line-between-groups": false,
+    }],
     "property-no-vendor-prefix": true,
     "rule-empty-line-before": ["always", {"except": ["after-single-line-comment", "first-nested"], ignore: ["after-comment"]}],
+    "scss/at-rule-no-unknown": true,
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-operator-space-before": "never",
@@ -43,30 +66,7 @@ module.exports = {
     "selector-pseudo-class-parentheses-space-inside": "never",
     "selector-pseudo-element-colon-notation": "single",
     "string-quotes": "double",
-    "value-no-vendor-prefix": true,
-    "scss/at-rule-no-unknown": true,
-    "order/order": [
-      {
-        "type": "at-rule",
-        "name": "extend"
-      },
-      {
-        "type": "at-rule",
-        "name": "include"
-      },
-      "declarations",
-      "rules",
-      {
-        "type": "at-rule",
-        "name": "media"
-      }
-    ],
-    "order/properties-order": [],
-    "plugin/rational-order": [true, {
-      "border-in-box-model": false,
-      "empty-line-between-groups": false,
-    }],
-    "declaration-colon-newline-after": null,
     "value-list-comma-newline-after": null,
+    "value-no-vendor-prefix": true,
   }
 };

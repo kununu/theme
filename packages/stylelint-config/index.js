@@ -65,7 +65,7 @@ module.exports = {
     }],
     "selector-pseudo-class-parentheses-space-inside": "never",
     "selector-pseudo-element-colon-notation": "single",
-    "string-quotes": "double",
+    "string-quotes": "single",
     "value-list-comma-newline-after": null,
     "value-no-vendor-prefix": true,
   }

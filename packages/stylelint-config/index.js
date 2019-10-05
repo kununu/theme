@@ -13,7 +13,7 @@ module.exports = {
     "color-hex-case": "lower",
     "color-hex-length": "long",
     "color-named": "never",
-    "comment-empty-line-before": ["always", {ignore: ["after-comment"]}],
+    "comment-empty-line-before": ["always", {except: ["first-nested"], ignore: ["after-comment"]}],
     "comment-whitespace-inside": "always",
     "declaration-block-trailing-semicolon": "always",
     "declaration-colon-space-after": "always",

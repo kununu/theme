@@ -27,9 +27,9 @@ module.exports = {
     "media-feature-range-operator-space-after": "always",
     "media-feature-range-operator-space-before": "always",
     "no-duplicate-selectors": true,
-    "number-leading-zero": "never",
+    "number-leading-zero": "always",
     "property-no-vendor-prefix": true,
-    "rule-empty-line-before": ["always", {"except": ["after-single-line-comment", "first-nested"]}],
+    "rule-empty-line-before": ["always", {"except": ["after-single-line-comment", "first-nested"], ignore: ["after-comment"]}],
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-operator-space-before": "never",
@@ -42,7 +42,7 @@ module.exports = {
     }],
     "selector-pseudo-class-parentheses-space-inside": "never",
     "selector-pseudo-element-colon-notation": "single",
-    "string-quotes": "single",
+    "string-quotes": "double",
     "value-no-vendor-prefix": true,
     "scss/at-rule-no-unknown": true,
     "order/order": [
@@ -65,6 +65,8 @@ module.exports = {
     "plugin/rational-order": [true, {
       "border-in-box-model": false,
       "empty-line-between-groups": false,
-    }]
+    }],
+    "declaration-colon-newline-after": null,
+    "value-list-comma-newline-after": null,
   }
 };

@@ -87,7 +87,7 @@ button,
 }
 
 p {
-  @include font-props($charcoal-grey,  18px, null, 24px);
+  @include font-props($charcoal-grey, 16px, null, 1.5);
 }
 
 ul {

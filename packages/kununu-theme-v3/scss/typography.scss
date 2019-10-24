@@ -2,31 +2,31 @@
 @import './mixins.scss';
 
 .h1 {
-  @include font-props($dark, 22px, -.27px, null, bold, center);
+  @include font-props($dark, 21px, -.2px, 1.52, bold, center);
 }
 
 .h2 {
-  @include font-props($charcoal-grey, 21px, -.3px, null, bold);
+  @include font-props($charcoal-grey, 18px, -.1px, 1.33, bold);
 
   & .center {
-    @include font-props(null, 22px, -.31px, 28px, null, center);
+    @include font-props(null, null, null, null, null, center);
   }
 }
 
 .h3 {
-  @include font-props($charcoal-grey, 18px, -.21px, null, bold);
+  @include font-props($charcoal-grey, 17px, -.09px, 1.41, bold);
 }
 
 .h4 {
-  @include font-props($dark, 18px, null, null, 600);
+  @include font-props($charcoal-grey, 16px, null, null, bold);
 }
 
 .h5 {
-  @include font-props($charcoal-grey, 16px, -.18px, null, 600);
+  @include font-props($charcoal-grey, 15px, null, null, bold);
 }
 
 .h6 {
-  @include font-props($light-grey-blue, 14px, -.16px, 1.33, bold);
+  @include font-props($charcoal-grey, 14px, null, null, bold);
 
   margin-bottom: 5px;
   text-transform: uppercase;

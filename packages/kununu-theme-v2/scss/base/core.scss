@@ -24,21 +24,23 @@ body {
   line-height: $line-height-base;
   color: $text-color;
   background-color: $body-bg;
-  padding-top: $navbar-height;
-
-  > header.navbar {
-    margin-bottom: 0;
+  
+  div {
+    > header.navbar {
+      margin-bottom: 0;
+    }
+    
+    > main {
+      padding-top: $navbar-height;
+      min-height: 100%;
+      overflow: auto;
+    }
+    
+    > footer {
+      margin-top: -$navbar-height;
+    }
   }
-
-  > main {
-    min-height: 100%;
-    overflow: auto;
-  }
-
-  > footer {
-    margin-top: -$navbar-height;
-  }
-
+    
   &.no-fixed-navbar {
     padding-top: 0;
   }

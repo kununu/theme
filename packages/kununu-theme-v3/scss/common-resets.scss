@@ -1,0 +1,114 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+/* 1. Change the font styles in all browsers */
+/* 2. Remove the margin in Firefox and Safari */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  font-family: inherit;
+}
+
+/* Correct the inability to style clickable types in iOS and Safari */
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-appearance: button; // stylelint-disable-line property-no-vendor-prefix
+
+  /* Remove the inner border and padding in Firefox */
+  &::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+  }
+
+  /* Restore the focus styles unset by the previous rule */
+  &:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+
+  /* Remove outline around element when focusing */
+  &:focus {
+    outline: 0;
+  }
+}
+
+p {
+  @include font-props($charcoal-grey, 16px, null, 1.5);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: $deep-sky-blue;
+}
+
+/* Correct the odd appearance in Safari */
+input[type='search'] { // stylelint-disable-line string-quotes
+  outline-offset: -2px;
+  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+
+  &::-webkit-search-decoration { // stylelint-disable-line string-quotes, selector-no-vendor-prefix
+    -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+  }
+}
+
+progress {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: $ice-blue;
+  border: none; // Get rid of default border in Firefox
+  border-radius: 99px;
+  appearance: none;
+
+  &::-webkit-progress-bar {
+    background: $ice-blue;
+    border-radius: 99px;
+  }
+
+  &::-webkit-progress-value {
+    position: absolute;
+    top: -1px;
+    height: 6px;
+    background: $blue-gradient;
+    border-radius: 99px;
+  }
+
+  &::-moz-progress-bar {
+    height: 6px;
+    margin-top: -1px;
+    background: $blue-gradient;
+    border-radius: 99px;
+  }
+
+  &::-ms-fill {
+    background: $blue-gradient;
+    border: none; // Get rid of default border in IE 11
+  }
+
+  &:not([value]) {
+    background: $ice;
+
+    &::-ms-fill {
+      animation-name: none; // remove ie animation
+    }
+
+    &::-webkit-progress-bar {
+      background: $ice;
+    }
+
+    &::-moz-progress-bar {
+      background: $ice;
+    }
+  }
+}

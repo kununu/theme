@@ -100,6 +100,13 @@ a {
   color: $deep-sky-blue;
 }
 
+em {
+  padding-bottom: 1px;
+  color: inherit;
+  font-size: inherit;
+  background-color: rgba($butterscotch, .5);
+}
+
 /* Correct the odd appearance in Safari */
 input[type='search'] { // stylelint-disable-line string-quotes
   outline-offset: -2px;

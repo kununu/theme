@@ -6,6 +6,7 @@
 @for $i from 1 through 4 {
   .col-s-#{$i} {
     grid-column-end: span $i;
+    min-width: 0;
     -ms-grid-column-span: 2 * $i - 1;
   }
 
@@ -19,6 +20,7 @@
   @for $i from 1 through 6 {
     .col-m-#{$i} {
       grid-column-end: span $i;
+      min-width: 0;
       -ms-grid-column-span: 2 * $i - 1;
     }
 
@@ -33,6 +35,7 @@
   @for $i from 1 through 12 {
     .col-l-#{$i} {
       grid-column-end: span $i;
+      min-width: 0;
       -ms-grid-column-span: 2 * $i - 1;
     }
 

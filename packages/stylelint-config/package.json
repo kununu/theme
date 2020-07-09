@@ -1,9 +1,11 @@
 {
   "name": "@kununu/stylelint-config",
-  "version": "1.0.3",
+  "version": "1.0.6-beta.0",
   "description": "kununu's stylelint config",
   "main": "index.js",
   "scripts": {
+    "publish": "npm publish",
+    "publish:beta": "npm publish --tag=beta",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,10 +28,10 @@
   },
   "homepage": "https://github.com/kununu/theme#readme",
   "dependencies": {
-    "stylelint": "10.1.0",
+    "stylelint": "13.6.1",
     "stylelint-config-rational-order": "0.1.2",
-    "stylelint-config-standard": "18.3.0",
-    "stylelint-order": "3.0.0",
-    "stylelint-scss": "3.8.0"
+    "stylelint-config-standard": "20.0.0",
+    "stylelint-order": "4.1.0",
+    "stylelint-scss": "3.18.0"
   }
 }

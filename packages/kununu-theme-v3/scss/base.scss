@@ -21,14 +21,6 @@ body {
   background-color: #f5f6f6;
 }
 
-@media (min-width: $desktop-xl-media) {
-  body > div:first-of-type {
-    max-width: $desktop-xl-media;
-    margin: 0 auto;
-    box-shadow: 0 12px 24px 0 rgba($black, .07);
-  }
-}
-
 /* 1. Correct the line height in all browsers */
 /* 2. Prevent adjustments of font size after orientation changes in iOS */
 html {

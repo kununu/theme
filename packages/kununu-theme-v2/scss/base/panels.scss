@@ -40,7 +40,7 @@
   }
 
   @media (max-width: $screen-xs-max) {
-    padding: $panel-padding / 2;
+    padding: $padding-base-vertical;
   }
 }
 
@@ -63,7 +63,7 @@
   }
 
   @media (max-width: $screen-xs-max) {
-    padding: $panel-padding / 2;
+    padding: $padding-base-vertical;
   }
 }
 

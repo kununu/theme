@@ -114,10 +114,9 @@ $line-height-h5:             18px;
 $line-height-h6:             18px;
 
 $line-height-base:           1.5;
-$line-height-sm-computed:    floor($font-size-sm * $line-height-base); // ~20px
 $baseline-grid:              6px;
 
-$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
+$line-height-computed:       21px;
 
 $font-weight-light:          400;
 $font-weight-regular:        400;
@@ -270,7 +269,7 @@ $panel-bg:                    #fff;
 $panel-border:                lighten($gray-light, 7%);
 $panel-footer-bg:             #f5f5f5;
 $panel-inner-border:          $panel-border;
-$panel-padding:               $grid-gutter-width / 2;
+$panel-padding:               20px;
 
 // Pagination
 // -------------------------

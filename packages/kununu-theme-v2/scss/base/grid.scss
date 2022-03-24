@@ -6,20 +6,20 @@
   max-width: 1450px;
 
   @media (max-width: $screen-xs-max) {
-    padding-left: $grid-gutter-width / 4;
-    padding-right: $grid-gutter-width / 4;
+    padding-left: $padding-base-vertical;
+    padding-right: $padding-base-vertical;
   }
 }
 
 @media (max-width: $screen-xs-max) {
   .row {
-    margin-left: -$grid-gutter-width / 4;
-    margin-right: -$grid-gutter-width / 4;
+    margin-left: -$padding-base-vertical;
+    margin-right: -$padding-base-vertical;
 
     > .col,
     [class*="col-"] {
-      padding-left: $grid-gutter-width / 4;
-      padding-right: $grid-gutter-width / 4;
+      padding-left: $padding-base-vertical;
+      padding-right: $padding-base-vertical;
     }
   }
 }

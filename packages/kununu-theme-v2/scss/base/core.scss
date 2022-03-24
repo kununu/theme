@@ -59,7 +59,7 @@ a {
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: ($line-height-computed / 2);
+  margin-bottom: 10.5px; // formerly $line-height-computed / 2, divisions will be deprecated in future sass
 
   ul,
   ol {
